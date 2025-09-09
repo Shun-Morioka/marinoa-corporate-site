@@ -6,37 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ページの説明">
   <meta name="format-detection" content="telephone=no">
-  <link rel="icon" href="ico">
-  <link rel="icon" href="svg" type="">
+  <link rel="icon" href="#">
+  <link rel="icon" href="#" type="">
 
   <!-- OPG関連 ------------------------------------------------------------------------>
   <!-- ウェブクリップアイコンの設定 -->
   <link rel="apple-touch-icon" href="">
   <!-- サイト名・絶対パスの設定 -->
   <meta property="og:site_name" content="サイト名">
-  <meta property="og:type" content="website or article">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="ページタイトル">
   <meta property="og:description" content="ページの説明">
   <meta property="og:image" content="URL">
   <meta property="og:locale" content="ja_JP">
   <!-- X専用記述 TwitterCard・ページの説明・シェア用の表示画像 -->
-  <meta name="twitter:card" content="summary_large or summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:description" content="ページ説明">
   <meta name="twitter:image:src" content="url">
 
   <title>株式会社MARINOA 企業情報サイト</title>
 
   <!-- stylesheet -->
-  <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="">
-  <script src="" defer></script>
+  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" href="#">
+  <script src="#" defer></script>
 </head>
 
 <body>
-  <header>
+
+  <header id="top">
     <h1 class="corporate-logo-White">
       <a href="/index.html">
-        <img src="" alt="株式会社MARINOAの企業ロゴ-白">
+        <img src="./images/common/header/corporate_logo_white.svg" alt="株式会社MARINOAの企業ロゴ-白">
       </a>
     </h1>
     <nav class="o-GNav">
@@ -48,13 +49,12 @@
         <li class="o-GNav-item"><a href="/contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main>
     <section class="mv">
       <h2>
-        <img src="" alt="株式会社MARINOA">
+        <img src="./images/top/mv/corporate_logo_blue.svg" alt="株式会社MARINOA">
       </h2>
     </section>
 
@@ -83,7 +83,7 @@
       <div class="brand-container">
         <h3 class="section-title">Brand</h3>
         <article class="brand-content">
-          <img src="/" alt="MARINOA HYDRATING LOTIONの写真">
+          <img src="./images/top/brand/brand_HydratingLotion_836*1120.webp" alt="MARINOA HYDRATING LOTIONの写真">
           <div class="brand-textbox">
             <h4 class="brand-catchcopy">潤い、それは心の変化。</h4>
             <div class="brand-description">
@@ -103,17 +103,16 @@
       <div class="news-container">
         <h3 class="section-title">News</h3>
         <div class="news-content">
-          <ul class="news-item-line">
+          <ul class="news-list">
             <li>
               <ul class="news-item">
                 <li><time datetime="2025-05-15" class="news-date">2025/05/15</time></li>
                 <li><span class="news-category">プレスリリース</span>
                 </li>
               </ul>
-              <a href="/" class="news-textlink">【ブランドサイト正式公開のお知らせ】</a>
+              <a href="#" class="news-textlink">【ブランドサイト正式公開のお知らせ】</a>
             </li>
           </ul>
-
           <ul class="news-item-line">
             <li>
               <ul class="news-item">
@@ -121,7 +120,7 @@
                 <li><span class="news-category">プレスリリース</span>
                 </li>
               </ul>
-              <a href="/" class="news-textlink">【お客様の声】体験談ページを更新しました</a>
+              <a href="#" class="news-textlink">【お客様の声】体験談ページを更新しました</a>
             </li>
           </ul>
           <ul class="news-item-line">
@@ -131,10 +130,9 @@
                 <li><span class="news-category">プレスリリース</span>
                 </li>
               </ul>
-              <a href="/" class="news-textlink">【冬の乾燥対策】保湿ケア特集ページを公開しました</a>
+              <a href="#" class="news-textlink">【冬の乾燥対策】保湿ケア特集ページを公開しました</a>
             </li>
           </ul>
-
           <ul class="news-item-line">
             <li>
               <ul class="news-item">
@@ -142,7 +140,7 @@
                 <li><span class="news-category">プレスリリース</span>
                 </li>
               </ul>
-              <a href="/" class="news-textlink">【新年のご挨拶】2025年もどうぞよろしくお願いいたします</a>
+              <a href="#" class="news-textlink">【新年のご挨拶】2025年もどうぞよろしくお願いいたします</a>
             </li>
           </ul>
         </div>
@@ -153,11 +151,12 @@
       <div class="other-container">
         <h3 class="section-title">other</h3>
         <div class="other-content">
-          <a href="#" class="company-btn">Company</a>
-          <a href="#" class="recruit-btn">Recruit</a>
+          <a href="/about.html" class="company-btn">Company</a>
+          <a href="/recruit.html" class="recruit-btn">Recruit</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
@@ -202,31 +201,20 @@
         </nav>
         <nav class="legal-links">
           <ul class="legal-link-list">
-            <li class="legal-link-item">利用規約</li>
-            <li class="legal-link-item">アクセシビリティ</li>
-            <li class="legal-link-item">個人情報保護方針</li>
-            <li class="legal-link-item">利用者情報の外部送信</li>
-            <li class="legal-link-item">ソーシャルメディアポリシー</li>
+            <li class="legal-link-item"><a href="#">利用規約</a></li>
+            <li class="legal-link-item"><a href="#">アクセシビリティ</a></li>
+            <li class="legal-link-item"><a href="#">個人情報保護方針</a></li>
+            <li class="legal-link-item"><a href="#">利用者情報の外部送信</a></li>
+            <li class="legal-link-item"><a href="#">ソーシャルメディアポリシー</a></li>
           </ul>
         </nav>
         <p class="footer-copyright">
-          <small>Copyright &copy; 2025 MARINOA Co., Ltd. All Rights Reserved.</small>
+          <small>Copyright &copy; 2025 MARINOA Co., Ltd.</small>
         </p>
       </div>
     </div>
   </footer>
-<a href="#top" class="scroll-top"><img src="./images/common/Back_to_Top.webp" alt="矢印のアイコン" class="arrow-image"></a>
-</body>
-
-</html>
-
-</head>
-
-<body>
-
-  <body>
-
-  </body>
+  <a href="#top" class="scroll-top"><img src="./images/common/Back_to_Top.webp" alt="ページの先頭へ戻る" class="arrow-image"></a>
 </body>
 
 </html>
