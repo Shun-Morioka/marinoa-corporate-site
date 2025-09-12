@@ -87,12 +87,13 @@ header .h-GNav-item .h-GNav-item-title {
 }
 
 .index .message .message-wrapper {
+  height: 64rem;
   font-family: "Shippori Mincho", "Mincho";
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  gap: 6rem;
-  padding: 9rem 8rem;
+  align-items: center;
+  padding: 4em 8rem;
   background-color: rgba(97, 152, 255, 0.9);
   border-radius: 20px;
 }
@@ -110,7 +111,7 @@ header .h-GNav-item .h-GNav-item-title {
 }
 
 
-/* massage---------------------------------------- */
+/* brand---------------------------------------- */
 .index .brand {
   display: flex;
   justify-content: center;
@@ -125,7 +126,7 @@ header .h-GNav-item .h-GNav-item-title {
   height: auto;
 }
 
-.index .brand .brand-container .section-title {
+.index .section-title_other {
   position: relative;
   color: #6198FF;
   font-size: 2.4rem;
@@ -133,19 +134,18 @@ header .h-GNav-item .h-GNav-item-title {
   margin-bottom: 4.8rem;
 }
 
-.index .brand .brand-container .section-title::after {
+.index .section-title_other::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 3px;
   width: 24rem;
-  background: linear-gradient(to right,#6198FF 0 30%, #fff 0 70%);
+  background: linear-gradient(to right, #6198FF 0 30%, #fff 0 70%);
 }
 
 .index .brand .brand-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 22.6rem;
 }
@@ -155,4 +155,143 @@ header .h-GNav-item .h-GNav-item-title {
   height: auto;
 }
 
+.index .brand .brand-textbox {
+  width: 34rem;
+}
+
+.index .brand .brand-catchcopy {
+  display: flex;
+  flex-flow: column;
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.index .brand .brand-description {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.index .brand .brand-cta {
+  margin-top: 8rem;
+  position: relative;
+  text-align: right;
+}
+
+.index .brand .brand-cta-link {
+  color: #5F79AA;
+}
+
+.index .brand .brand-cta-link::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background-image: url("/images/top/brand/Arrow_blue.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(1.2rem, 0.4rem);
+
+}
+
+/* news---------------------------------------- */ 
+  .index .news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .index .news .news-container {
+    margin: 10rem 0 5rem 0;
+    width: 120rem;
+  }
+
+.index .news .news-list {
+  margin-bottom: 3.2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #D9D9D9;
+}
+.index .news .news-list:last-child {
+  margin-bottom: 0;
+}
+
+.index .news .news-item {
+  display: flex;
+  justify-content: left;
+  gap: 2.4rem;
+}
+
+.index .news .news-date {
+  font-size: 1.4rem;
+}
+
+.index .news .news-textlink {
+ display: inline-block;
+ margin: 2rem 0 0 10.2rem;
+ color: #101010;
+}
+
+.index .news .news-category {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #6198FF;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+} 
+
+
+/* other---------------------------------------- */
+.index .other {
+  margin: 5rem 0 10rem 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index .other .other-container {
+  width: 120rem;
+}
+
+.index .other .other-content {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.index .other .other-btn {
+  display: inline-block;
+  width: 24rem;
+  font-size: 2.4rem;
+  color: #fff;
+  background-color: #5F79AA;
+  padding: 2rem 0;
+}
+.index .other .other-btn:last-child {
+  margin-left: 16rem;
+}
+
+
+/* common---------------------------------------- */
+.index .section-title {
+  position: relative;
+  color: #6198FF;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 4.8rem;
+}
+
+.index .section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 24rem;
+  background: linear-gradient(to right, #709EFC 0 30%, #E8F0FF 0 70%);
+}
 
