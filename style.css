@@ -428,11 +428,64 @@ footer .footer-copyright {
 
 /* mission---------------------------------------- */
 .about .mission {
-  margin-top: 10rem;
+  margin: 18rem 0 10rem 0;
   width: 100%;
 }
 
-.about.mission-container {
+.about .mission-container {
   width: 120rem;
+  margin: 0 auto;
 }
+
+.about .mission-content {
+  display: flex;
+  align-items: center;
+  gap: 17rem;
+} 
+
+.about .mission-image-woman {
+  width: 42rem;
+}
+
+.about .mission-catchcopy {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.about .mission-description {
+  line-height: 2.4;
+}
+
+/* vision---------------------------------------- */
+.about .vision {
+  width: 100%;
+}
+
+.about .vision-container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.about .vision-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+} 
+
+.about .vision-image-woman {
+  width: 60rem;
+}
+
+.about .vision-catchcopy {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.about .vision-description {
+  line-height: 2.4;
+}
+
 
