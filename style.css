@@ -428,7 +428,7 @@ footer .footer-copyright {
 
 /* mission---------------------------------------- */
 .about .mission {
-  margin: 18rem 0 10rem 0;
+  margin: 15rem 0 10rem 0;
   width: 100%;
 }
 
@@ -534,7 +534,7 @@ footer .footer-copyright {
 /* vision---------------------------------------- */
 .about .history {
   width: 100%;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
 }
 
 .about .history-container {
@@ -543,16 +543,43 @@ footer .footer-copyright {
 }
 
 .about .history-header {
-  margin-bottom : 6rem;
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
   font-weight: 600;
 }
 
-.about .history-header .year-label{
+.about .history-header::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #E8F0FF;
+}
+
+.about .history-header .year-label {
   margin-left: 1.2rem;
 }
 
-.about .history-header .event-label{
+.about .history-header .event-label {
   margin-left: 13.3rem;
+}
+
+.about .history-list {
+  position: relative;
+  height: auto;
+}
+
+.about .history-list::after {
+  position: absolute;
+  content: "";
+  top: -42px;
+  left: 10rem;
+  width: 2px;
+  height: 42rem;
+  background-color: #E8F0FF;
 }
 
 .about .history-item {
@@ -562,5 +589,20 @@ footer .footer-copyright {
 .about .history-list .year {
   display: inline-block;
   width: 16rem;
+  position: relative;
 }
 
+.about .history-list .year::after {
+  position: absolute;
+  content: "";
+  z-index: 99;
+  top: 50%;
+  left: 9.6rem;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #709EFC;
+}
+
+/* brand --------------------------------------------------------------------------------*/
