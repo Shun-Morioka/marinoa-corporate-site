@@ -812,7 +812,7 @@ footer .footer-copyright {
 
 /* #news --------------------------------------------------------------------------------*/
 /* .news---------------------------------------- */
-.news {
+#news {
   padding-top: 14rem;
 }
 
@@ -868,3 +868,14 @@ footer .footer-copyright {
   color: #6198FF;
 }
 
+/* #contact --------------------------------------------------------------------------------*/
+/* .contact---------------------------------------- */
+#contact {
+  padding-top: 14rem;
+}
+
+#contact .contact .news-container {
+  width: 120rem;
+  height: auto;
+  margin: 0 auto;
+}
