@@ -256,7 +256,7 @@ footer .footer-copyright {
 }
 
 .index .brand .brand-container {
-  width: 80%;
+  width: 120rem;
   height: auto;
 }
 
@@ -871,11 +871,98 @@ footer .footer-copyright {
 /* #contact --------------------------------------------------------------------------------*/
 /* .contact---------------------------------------- */
 #contact {
-  padding-top: 14rem;
+  padding: 14rem 0 10rem 0;
 }
 
-#contact .contact .news-container {
-  width: 120rem;
+#contact .contact .contact-container {
+  width: 90rem;
   height: auto;
   margin: 0 auto;
+}
+
+#contact .section-title {
+  margin-bottom: 4.0rem;
+}
+
+#contact .contact-description {
+  width: 92rem;
+  line-height: 1.5;
+}
+
+#contact .contact-form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+#contact label {
+  display: inline-block;
+  width: 18rem;
+  height: auto;
+  text-align: right;
+  margin-right: 4rem;
+}
+
+#contact #name,#email,#tel,#category,#message {
+  background-color: #CCDEFF;
+  border: none;
+  padding: 1rem 2rem;
+}
+
+#contact #name,#email,#tel,#category {
+  width: 40rem;
+}
+
+#contact #message {
+  width: 68rem;
+  height: 30rem;
+  resize: none;
+}
+
+#contact .message {
+  display: flex;
+  align-items: flex-start;
+}
+
+#contact .required {
+  font-size: 1.2rem;
+  color: #FC0015;
+  border: 1px solid #FC0015;
+  padding: 0.2rem 0.8rem;
+  margin: 0 0 0 1rem;
+  border-radius: 20rem;
+}
+
+#contact .checkbox,.button {
+  text-align: center;
+}
+
+#contact .checkbox input{
+  width: 4rem;
+}
+
+#contact .checkbox .privacy-link {
+  display: inline-flex;
+  align-items: center;
+  color: #5188FC;
+}
+
+#contact .checkbox .privacy-link::after {
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("./images/contact/privacy-link-IMG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact .button #submit{
+  background-color: #5F79AA;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
 }

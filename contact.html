@@ -62,21 +62,22 @@
             こちらのフォームからお問い合わせください。<br>
             お問い合わせの内容によっては、お時間を要する場合やお答えができない場合がございますので、あらかじめご了承ください。<br>
           </p>
-          <form action="#" method="post">
+          <form action="#" method="post" class="contact-form">
             <div class="name">
-              <label for="name">氏名</label>
-              <input type="text" id="name" name="name" required>
+              <label for="name">氏名<span class="required">必須</span></label>
+              <input type="text" id="name" name="name" placeholder="例）山田太郎" required>
             </div>
             <div class="email">
-              <label for="email">メールアドレス</label>
-              <input type="email" id="email" name="email" required>
+              <label for="email">メールアドレス<span class="required">必須</span></label>
+              <input type="email" id="email" name="email" placeholder="例）your-name@example.com" required>
             </div>
             <div class="tel">
               <label for="tel">電話番号</label>
               <input type="tel" id="tel" name="tel" pattern="[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}"
-                placeholder="03-0000-0000" required>
+                placeholder="03-0000-0000">
             </div>
-            <div class="category">カテゴリ
+            <div class="category">
+              <label for="category" >カテゴリ<span class="required">必須</span></label>
               <select name="category" id="category" required>
                 <option value="">選択してください</option>
                 <option value="inquiry">一般のお問い合わせ</option>
@@ -85,14 +86,16 @@
                 <option value="other">その他</option>
               </select>
             </div>
+            <div class="message">
+              <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+              <textarea name="message" id="message" maxlength="300" placeholder="300文字以内でご記入ください。" required></textarea>
+            </div>
             <div class="checkbox">
-              <label for="">
                 <input type="checkbox" name="agree" required>
-                <a href="/privacy" target="_blank"><span>個人情報の取り扱いに関する事項</span>に同意する</a>
-              </label>
+                <a href="/privacy" class="privacy-link" target="_blank">個人情報の取り扱いに関する事項</a><span>に同意する</span>
             </div>
             <div class="button">
-              <button type="submit">送信</button>
+              <button type="submit" id="submit">送信</button>
             </div>
           </form>
         </div>
