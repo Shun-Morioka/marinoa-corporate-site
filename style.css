@@ -904,13 +904,13 @@ footer .footer-copyright {
   margin-right: 4rem;
 }
 
-#contact #name,#email,#tel,#category,#message {
+#contact #name, #email, #tel, #category, #message {
   background-color: #CCDEFF;
   border: none;
   padding: 1rem 2rem;
 }
 
-#contact #name,#email,#tel,#category {
+#contact #name, #email, #tel, #category {
   width: 40rem;
 }
 
@@ -934,11 +934,11 @@ footer .footer-copyright {
   border-radius: 20rem;
 }
 
-#contact .checkbox,.button {
+#contact .checkbox, .button {
   text-align: center;
 }
 
-#contact .checkbox input{
+#contact .checkbox input {
   width: 4rem;
 }
 
@@ -959,10 +959,174 @@ footer .footer-copyright {
   background-size: cover;
 }
 
-#contact .button #submit{
+#contact .button #submit {
   background-color: #5F79AA;
   color: #fff;
   border: none;
   padding: 0.4rem 1.2rem;
   cursor: pointer;
 }
+
+/* #recruit --------------------------------------------------------------------------------*/
+/* .mv---------------------------------------- */
+#recruit .mv-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#recruit .message {
+  width: 100%;
+  background: linear-gradient(#8CB2FF 15%, #BFD4FF 70%);
+}
+
+#recruit .message-container {
+  width: 120rem;
+  padding: 20rem 0;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+#recruit .message-text {
+  font-family: "Shippori Mincho", "Mincho";
+  color: #fff;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* .president-message---------------------------------------- */
+#recruit .president-message {
+  padding: 10rem 0;
+}
+
+
+#recruit .president-message-container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+#recruit .president-message-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#recruit .president-message-textbox {
+  width: 62rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#recruit .president-message-catchcopy {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+#recruit .img-content {
+  transform: translateY(4.6rem);
+}
+
+#recruit .img-content .president-image {
+  width: 38rem;
+}
+
+#recruit .img-content .product-name {
+  text-align: right;
+}
+
+#recruit .img-content .product-name .label {
+  margin-right: 2.4rem;
+}
+
+/* .team---------------------------------------- */
+#recruit .team {
+  margin-bottom: 10rem;
+}
+
+#recruit .team-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+#recruit .team-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+#recruit .team-member {
+  flex: 1;
+} 
+
+#recruit .team-member .team-member__photo {
+  display: block;
+  margin: 0 auto;
+  width: 20rem;
+  height: auto;
+}
+
+#recruit .team-member .team-member__label {
+  background-color: #699AFF;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  transform: translateY(-1.2rem);
+  width: fit-content;
+}
+
+#recruit .team-member:first-child .team-member__label{
+  padding: 0.2rem 0 0.2rem 0.7rem;
+}
+
+#recruit .team-member:nth-child(2) .team-member__label{
+  padding: 0.2rem 3rem;
+}
+
+#recruit .team-member:nth-child(3) .team-member__label{
+  padding: 0.2rem 3rem;
+  transform: translate(-4.6rem, -1.2rem);
+}
+
+#recruit .team-member:nth-child(4) .team-member__label{
+  padding: 0.2rem 0.7rem;
+}
+
+#recruit .team-member .team-member__name {
+  font-size: 2rem;
+  font-weight: bold;
+  transform: translate(11.6rem,-1rem);
+}
+
+#recruit .team-member .team-member__text {
+  margin: 0.8rem 0 2rem 0;
+  font-size: 1.4rem;
+}
+
+#recruit .team-member .team-member__footer {
+  color: #699AFF;
+  text-align: right;
+}
+
+#recruit .team-member .team-member__link::after {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+  background-image: url("./images/recruit/Team/Arrow_blue.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-0.15rem);
+  margin-left: 1rem;
+}
+
+#recruit .team-member .team-member__link:visited {
+  color: #699AFF;
+}
+
