@@ -1150,7 +1150,7 @@ footer .footer-copyright {
   border: 4px solid #6395FF;
   border-radius: 10px;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 12rem auto;
   padding: 0.8rem 4.8rem;
   font-family: "M PLUS Rounded 1c", "Rounded Mplus 1c",
     "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
@@ -1251,9 +1251,13 @@ footer .footer-copyright {
   transform: translateY(-6.6rem);
 }
 
+#recruit .stats-box__wide:nth-of-type(2) .stats-box__number {
+  font-size: 12rem;
+}
+
 #recruit .stats-box__wide .stats-box__number {
   display: inline-block;
-  font-size: 12rem;
+  font-size: 8rem;
 }
 
 #recruit .stats-box__wide:nth-of-type(2) .stats-box__number {
@@ -1264,7 +1268,73 @@ footer .footer-copyright {
   font-size: 4.8rem;
 }
 
+#recruit .stats-box__wide .stats-box__list {
+  display: flex;
+  justify-content: center;
+  gap: 4.6rem;
+}
 
+#recruit .stats-box__wide .stats-box__list .stats-box__woman .stats-box__number {
+  color: #FF63C6;
+}
+
+/* squareの要素の設定 */
+#recruit .stats-box__square .stats-box__label {
+  width: 90%;
+  padding: 0.2rem 0;
+  margin-bottom: 2.2rem;
+}
+
+#recruit .stats-box__square:nth-of-type(6) .stats-box__label {
+  font-size: 1.4rem;
+}
+
+#recruit .stats-box__square .stats-box__number {
+  font-size: 8rem;
+}
+
+#recruit .stats-box__square .stats-box__unit {
+  font-size: 3.2rem;
+}
+
+#recruit .stats-box__square .stats-box__alert {
+  font-size: 1rem;
+  color: #6E6E6E;
+  text-align: start;
+  margin-left: 2.4rem;
+  font-weight: 700;
+}
+
+/* tallの要素の設定 */
+#recruit .stats-box__tall .stats-box__item {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#recruit .stats-box__tall .stats-box__item:first-child {
+  border-bottom: 2px dashed #6395FF;
+}
+
+#recruit .stats-box__tall .stats-box__label {
+  width: 60%;
+  padding: 0.2rem 0;
+  margin: 3.2rem auto 2.2rem auto;
+}
+
+#recruit .stats-box__tall .stats-box__item:nth-child(2) .stats-box__label {
+  margin: 4.2rem auto 2.2rem auto;
+}
+
+#recruit .stats-box__tall .stats-box__number {
+  font-size: 8rem;
+}
+
+#recruit .stats-box__tall .stats-box__unit {
+  font-size: 3.2rem;
+}
+
+/* stats内の画像設定 */
 
 #recruit .marinoa-stats .stats-box__img {
   mix-blend-mode: multiply;
@@ -1280,12 +1350,47 @@ footer .footer-copyright {
   margin-left: 3.2rem;
 }
 
+#recruit .marinoa-stats .stats-box__img.clock-img {
+  margin-left: 3.2rem;
+  transform: translateY(0.6rem);
+}
+
 #recruit .marinoa-stats .stats-box__img.beaker-img, #recruit .marinoa-stats .clock-img {
   width: 16%;
-  height: auto;
+  height: auto;  
 }
 
 #recruit .marinoa-stats .stats-box__img.vacances-img {
   width: 44%;
   height: auto;
+}
+
+#recruit .marinoa-stats .stats-box__img.pict-man-img ,.pict-woman-img {
+  width: auto;
+  height: 5.7rem;
+} 
+
+/* .entry---------------------------------------- */
+#recruit .entry {
+  padding: 8rem 0 10rem 0;
+}
+
+#recruit .entry-container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+#recruit .entry-content {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 16.8rem;
+}
+
+#recruit .entry-btn {
+  background-color: #5F79AA;
+  padding: 2rem 12rem;
+  color: #fff;
+  font-size: 3.2rem;
+  border-radius: 20rem;
 }
