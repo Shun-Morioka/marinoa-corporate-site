@@ -195,7 +195,7 @@ footer .footer-copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/top/mv/top_mv_3024*1750.webp");
+  background-image: url("./images/top/mv/top_mv_3024*1750.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -212,7 +212,7 @@ footer .footer-copyright {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(./images/top/message/underwater_3024*1760.webp);
   background-position: center;
   background-repeat: no-repeat;
@@ -221,7 +221,7 @@ footer .footer-copyright {
 
 .index .message .message-wrapper {
   height: 64rem;
-  font-family: "Shippori Mincho", "Mincho";
+  font-family: "Shippori Mincho", serif;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -260,7 +260,7 @@ footer .footer-copyright {
   height: auto;
 }
 
-.index .section-title_other {
+.index .section-title-other {
   position: relative;
   color: #6198FF;
   font-size: 2.4rem;
@@ -268,7 +268,7 @@ footer .footer-copyright {
   margin-bottom: 4.8rem;
 }
 
-.index .section-title_other::after {
+.index .section-title-other::after {
   content: "";
   position: absolute;
   left: 0;
@@ -287,10 +287,6 @@ footer .footer-copyright {
 .index .brand .brand-content .product-image {
   width: 35%;
   height: auto;
-}
-
-.index .brand .brand-textbox {
-  width: 34rem;
 }
 
 .index .brand .brand-catchcopy {
@@ -615,6 +611,7 @@ footer .footer-copyright {
 .brand .intro-container {
   width: 120rem;
   height: auto;
+  position: relative;
 }
 
 .brand .intro-content {
@@ -623,26 +620,24 @@ footer .footer-copyright {
   gap: 22.6rem;
 }
 
+.brand .intro-content::after {
+  content: "";
+  position: absolute;
+  left: 62.5rem;
+  top: 8.2rem;
+  width: 52%;
+  aspect-ratio: 7.04 / 1;
+  background-image: url(./images/brand/brand/corporate_logo_black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.05;
+  z-index: -100;
+}
 
 .brand .intro-content .product-image {
-  width: 42rem;
+  width: 40rem;
   height: auto;
-}
-
-.brand .intro-textbox {
-  position: relative;
-  width: 34rem;
-}
-
-.brand .intro-textbox::after {
-  position: absolute;
-  content: "";
-  background-image: url("/images/brand/brand/corporate_logo_black.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: auto;
-  height: 10rem;
 }
 
 .brand .intro-catchcopy {
@@ -662,24 +657,16 @@ footer .footer-copyright {
 .brand .intro-cta {
   margin-top: 8rem;
   position: relative;
-  text-align: right;
+  text-align: center;
 }
 
 .brand .intro-cta-link {
   color: #5F79AA;
+  padding: 1.6rem 4.8rem;
+  border: 1px solid #5F79AA;
 }
 
-.brand .intro-cta-link::after {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 3rem;
-  height: 3rem;
-  background-image: url("/images/top/brand/Arrow_blue.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: translate(1.2rem, 0.4rem);
-}
+
 
 /* Quality---------------------------------------- */
 .brand .quality {
@@ -758,6 +745,22 @@ footer .footer-copyright {
   display: flex;
   align-items: center;
   gap: 22.6rem;
+  position: relative;
+}
+
+.brand .new-content::after {
+  content: "";
+  position: absolute;
+  left: 64.5rem;
+  top: 0.2rem;
+  width: 52%;
+  aspect-ratio: 7.04 / 1;
+  background-image: url(./images/brand/brand/corporate_logo_black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.05;
+  z-index: -100;
 }
 
 
@@ -991,7 +994,7 @@ footer .footer-copyright {
 }
 
 #recruit .message-text {
-  font-family: "Shippori Mincho", "Mincho";
+  font-family: "Shippori Mincho", serif;
   color: #fff;
   font-weight: 400;
   line-height: 2;
@@ -1357,7 +1360,7 @@ footer .footer-copyright {
 
 #recruit .marinoa-stats .stats-box__img.beaker-img, #recruit .marinoa-stats .clock-img {
   width: 16%;
-  height: auto;  
+  height: auto;
 }
 
 #recruit .marinoa-stats .stats-box__img.vacances-img {
@@ -1365,10 +1368,10 @@ footer .footer-copyright {
   height: auto;
 }
 
-#recruit .marinoa-stats .stats-box__img.pict-man-img ,.pict-woman-img {
+#recruit .marinoa-stats .stats-box__img.pict-man-img, .pict-woman-img {
   width: auto;
   height: 5.7rem;
-} 
+}
 
 /* .entry---------------------------------------- */
 #recruit .entry {
