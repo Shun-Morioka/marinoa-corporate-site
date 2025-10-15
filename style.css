@@ -19,22 +19,25 @@ body {
 
 }
 
-/* header-main---------------------------------------- */
+/* header --------------------------------------------------------------------------------*/
 
-.header-main {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.header-main, .header-other {
+  display:flex;
+  justify-content:center;
+  width:100%;
   height: 7.2rem;
-  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1.5px);
-  z-index: 99;
   position: fixed;
   top: 0;
+  z-index: 99;
 }
 
+/* header-main---------------------------------------- */
+.header-main { background-color: rgba(255,255,255,0.1); }
+
 .header-content {
-  width: 120rem;
+  max-width: 120rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,25 +58,13 @@ body {
   color: #fff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   font-weight: 600;
-}
+} 
 
 /* header-other---------------------------------------- */
-.header-other {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 7.2rem;
-  background-color: #CCDEFF;
-  backdrop-filter: blur(1.5px);
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
+.header-other { background-color: #CCDEFF; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
 
 
-
-/* footer---------------------------------------- */
+/* footer --------------------------------------------------------------------------------*/
 footer {
   width: 100%;
   height: auto;
@@ -84,7 +75,8 @@ footer {
 }
 
 footer .footer-container {
-  width: 120rem;
+  max-width: 120rem;
+  width: 100%;
   display: flex;
   align-items: start;
 }
@@ -151,20 +143,6 @@ footer .legal-link-text {
 footer .footer-copyright {
   margin-top: 5.6rem;
 }
-
-/* scroll-top---------------------------------------- */
-
-/* .scroll-top {
-  height: auto;
-  position:fixed;
-  bottom: 42rem;
-  right: 18rem;
-}
-
-.scroll-top .arrow-image {
-  opacity: 0.8;
-  width: 5.6rem;
-} */
 
 /* common---------------------------------------- */
 .section-title {
@@ -256,7 +234,8 @@ footer .footer-copyright {
 }
 
 .index .brand .brand-container {
-  width: 120rem;
+  max-width: 120rem;
+  width: 100%;
   height: auto;
 }
 
@@ -337,7 +316,8 @@ footer .footer-copyright {
 
 .index .news .news-container {
   margin: 10rem 0 5rem 0;
-  width: 120rem;
+  max-width: 120rem;
+  width: 100%;
 }
 
 .news .news-list {
@@ -386,7 +366,8 @@ footer .footer-copyright {
 }
 
 .index .other .other-container {
-  width: 120rem;
+  max-width: 120rem;
+  width: 100%;
 }
 
 .index .other .other-content {
@@ -416,7 +397,8 @@ footer .footer-copyright {
 }
 
 .about .mission-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -447,7 +429,8 @@ footer .footer-copyright {
 }
 
 .about .vision-container {
-  width: 120rem;
+  max-width: 120rem;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -479,7 +462,8 @@ footer .footer-copyright {
 }
 
 .about .overview-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -521,7 +505,8 @@ footer .footer-copyright {
 }
 
 .about .history-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -609,7 +594,8 @@ footer .footer-copyright {
 }
 
 .brand .intro-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   height: auto;
   position: relative;
 }
@@ -675,7 +661,8 @@ footer .footer-copyright {
 }
 
 .brand .quality-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -737,7 +724,8 @@ footer .footer-copyright {
 }
 
 .brand .new-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   height: auto;
 }
 
@@ -820,7 +808,8 @@ footer .footer-copyright {
 }
 
 #news .news .news-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   height: auto;
   margin: 0 auto;
 }
@@ -907,7 +896,13 @@ footer .footer-copyright {
   margin-right: 4rem;
 }
 
-#contact #name, #email, #tel, #category, #message {
+
+/* フォーム記入欄 */
+#contact #name,
+#contact #email,
+#contact #tel,
+#contact #category,
+#contact #message {
   background-color: #CCDEFF;
   border: none;
   padding: 1rem 2rem;
@@ -937,7 +932,7 @@ footer .footer-copyright {
   border-radius: 20rem;
 }
 
-#contact .checkbox, .button {
+#contact .checkbox,#contact .button {
   text-align: center;
 }
 
@@ -984,7 +979,8 @@ footer .footer-copyright {
 }
 
 #recruit .message-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   padding: 20rem 0;
   text-align: center;
   margin: 0 auto;
@@ -1007,7 +1003,8 @@ footer .footer-copyright {
 
 
 #recruit .president-message-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -1051,6 +1048,7 @@ footer .footer-copyright {
 }
 
 #recruit .team-container {
+  width: 100%;
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -1379,7 +1377,8 @@ footer .footer-copyright {
 }
 
 #recruit .entry-container {
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -1397,3 +1396,6 @@ footer .footer-copyright {
   font-size: 3.2rem;
   border-radius: 20rem;
 }
+
+
+/* レスポンシブ --------------------------------------------------------------------------------*/
