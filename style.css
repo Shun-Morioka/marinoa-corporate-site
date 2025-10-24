@@ -357,11 +357,14 @@ footer .footer-copyright {
 
 .news .news-date {
   font-size: 1.4rem;
+  display: inline-block;
+  width: 9rem;
 }
 
 .news .news-textlink {
   display: block;
   padding: 2rem 0 0 10.2rem;
+  margin: 0;
   color: #101010;
 }
 
@@ -373,10 +376,13 @@ footer .footer-copyright {
 }
 
 .news .news-category {
+  display: inline-block;
+  width: 10.2rem;
+  text-align: center;
   font-size: 1.2rem;
   color: #fff;
   background-color: #6198FF;
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 2rem;
 }
 
@@ -598,7 +604,7 @@ footer .footer-copyright {
 .about .history-list .year::after {
   position: absolute;
   content: "";
-  z-index: 99;
+  z-index: 98;
   top: 50%;
   left: 9.6rem;
   transform: translateY(-50%);
@@ -895,10 +901,6 @@ footer .footer-copyright {
   width: 83%;
 }
 
-#news .news-textlink {
-  margin-top: 2rem;
-}
-
 #news .pagination {
   margin: 6rem 0 10rem 0;
 }
@@ -906,7 +908,7 @@ footer .footer-copyright {
 #news .pagination-list {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 #news .pagination-list .page-prev, .page-link, .page-next {
