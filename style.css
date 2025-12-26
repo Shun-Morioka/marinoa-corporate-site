@@ -16,20 +16,25 @@ body {
   color: #101010;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* header --------------------------------------------------------------------------------*/
 /* header 共通 */
 .site-header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 7.2rem;
-  backdrop-filter: blur(1.5px);
   position: fixed;
   top: 0;
   z-index: 99;
+  width: 100%;
+  height: 7.2rem;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(1.5px);
 }
 
 /* home用（旧 header-main） */
@@ -43,13 +48,6 @@ body {
   background-color: #CCDEFF;
 }
 
-
-/* ロゴが白前提なら不要。色を変えるならここで制御 */
-.site-header--sub .site-header__logo img {
-  filter: none;
-}
-
-
 .site-header__inner {
   max-width: 132rem;
   width: 100%;
@@ -61,14 +59,6 @@ body {
 
 .site-header__logo {
   width: 14rem;
-  height: auto;
-}
-
-/* ロゴの崩れ防止（推奨） */
-.site-header__logo img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 /* global nav */
@@ -86,7 +76,7 @@ body {
 
 /* footer --------------------------------------------------------------------------------*/
 .site-footer {
-  width: 100%;
+  /* width: 100%; */
   background-color: #CCDEFF;
   padding: 16rem 0 14rem;
   display: flex;
@@ -1565,4 +1555,10 @@ opacity: 0.9;
   transition: 0.5s;
 }
 
+
+
+
 /* レスポンシブ --------------------------------------------------------------------------------*/
+@media screen and (max-width: 375px) {
+
+}
