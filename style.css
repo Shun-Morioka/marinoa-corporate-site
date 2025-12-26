@@ -20,8 +20,8 @@ body {
 }
 
 /* header --------------------------------------------------------------------------------*/
-
-.header-main, .header-other {
+/* header 共通 */
+.site-header {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -32,13 +32,26 @@ body {
   z-index: 99;
 }
 
-/* header-main---------------------------------------- */
-.header-main {
+/* home用（旧 header-main） */
+.site-header--home {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.header-content {
-  max-width: 120rem;
+
+/* 下層ページは文字を濃色にするなら */
+.site-header--sub {
+  background-color: #CCDEFF;
+}
+
+
+/* ロゴが白前提なら不要。色を変えるならここで制御 */
+.site-header--sub .site-header__logo img {
+  filter: none;
+}
+
+
+.site-header__inner {
+  max-width: 132rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -46,125 +59,131 @@ body {
   padding: 0 6rem;
 }
 
-.header-content .corporate-logo-white {
+.site-header__logo {
   width: 14rem;
   height: auto;
 }
 
-.header-content .h-GNav-container {
+/* ロゴの崩れ防止（推奨） */
+.site-header__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* global nav */
+.global-nav__list {
   display: flex;
   gap: 7.2rem;
 }
 
-.header-content .h-GNav-item .h-GNav-item-title {
+.global-nav__link {
   font-size: 1.4rem;
   color: #fff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   font-weight: 600;
 }
 
-/* header-other---------------------------------------- */
-.header-other {
-  background-color: #CCDEFF;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-
 /* footer --------------------------------------------------------------------------------*/
-footer {
+.site-footer {
   width: 100%;
-  height: auto;
   background-color: #CCDEFF;
-  padding: 16rem 0 14rem 0;
+  padding: 16rem 0 14rem;
   display: flex;
   justify-content: center;
 }
 
-footer .footer-container {
-  max-width: 120rem;
+.site-footer__inner {
+  max-width: 132rem;   /* 中身1200px運用ならこれ */
   width: 100%;
-  display: flex;
-  align-items: start;
   padding: 0 6rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
 }
 
-footer .footer-logo-image {
+/* ロゴは左列 */
+.site-footer__logo {
+  grid-column: 1;
+  justify-self: start;
   width: 17.6rem;
   height: auto;
 }
 
-footer .footer-content {
+
+/* ナビ群（SNS/フッターナビ/法的/コピー）は中央列で“画面中央”に固定 */
+.site-footer__content {
+  grid-column: 2;
+  justify-self: center;
   text-align: center;
 }
 
-footer .footer-sns {
+footer .site-footer__sns {
   margin: 0 auto;
   width: 21.6rem;
   height: auto;
 }
 
-footer .footer-sns-title {
+footer .site-footer__sns-title {
   font-weight: 500;
 }
 
-footer .footer-sns-list {
+footer .site-footer__sns-list {
   margin-top: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-footer .footer-sns-image {
+footer .site-footer__sns-icon {
   width: 2.4rem;
   height: auto;
 }
 
-footer .footer-sns-item:hover {
+footer .site-footer__sns-item:hover {
   opacity: 0.5;
 }
 
-footer .f-GNav-list {
+footer .footer-nav__list {
   margin-top: 5.6rem;
   display: flex;
   justify-content: center;
   gap: 4rem;
 }
 
-footer .f-GNav-text {
+footer .footer-nav__link {
   font-size: 1.4rem;
   color: #101010;
 }
 
-footer .f-GNav-text:hover {
+footer .footer-nav__link:hover {
   color: #5F79AA;
 }
 
-
-footer .f-GNav-contact .f-GNav-text {
+footer .footer-nav__contact .footer-nav__link {
   display: inline-block;
   font-size: 1.6rem;
   margin: 5.6rem 0 5.6rem 0;
 }
 
-footer .legal-link-list {
+footer .legal-nav__list {
   display: flex;
   justify-content: space-between;
   gap: 4rem;
 }
 
-footer .legal-link-text {
+footer .legal-nav__link {
   color: #101010;
 }
 
-footer .legal-link-text:hover {
+footer .legal-nav__link:hover {
   color: #5F79AA;
 }
 
-
-footer .footer-copyright {
+footer .site-footer__copyright {
   margin-top: 5.6rem;
 }
+
 
 /* common---------------------------------------- */
 .section-title {
@@ -185,11 +204,22 @@ footer .footer-copyright {
   background: linear-gradient(to right, #709EFC 0 30%, #E8F0FF 0 70%);
 }
 
-/* index --------------------------------------------------------------------------------*/
+/* alt は「完全上書き」する */
+.section-title--alt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 24rem;
+  background: linear-gradient(to right, #6198FF 0 30%, #fff 0 70%);
+}
 
-/* mv---------------------------------------- */
 
-.index .mv {
+/* page-home --------------------------------------------------------------------------------*/
+
+/* mv */
+.page-home .home-hero {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -201,13 +231,25 @@ footer .footer-copyright {
   background-position: center;
 }
 
-.index .mv .corporate-logo-blue {
+.page-home .home-hero__logo {
   width: 53rem;
   height: auto;
 }
 
-/* massage---------------------------------------- */
-.index .message {
+.page-home .home-news {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-home .home-news__inner {
+  max-width: 120rem;
+  width: 100%;
+  padding: 0 6rem;
+}
+
+/* message */
+.page-home .home-message {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,7 +261,7 @@ footer .footer-copyright {
   background-size: cover;
 }
 
-.index .message .message-wrapper {
+.page-home .home-message__inner {
   height: 64rem;
   font-family: "Shippori Mincho", serif;
   display: flex;
@@ -231,21 +273,20 @@ footer .footer-copyright {
   border-radius: 20px;
 }
 
-.index .message .message-title {
+.page-home .home-message__title {
   margin-left: 2rem;
   color: #fff;
   font-size: 3.2rem;
 }
 
-.index .message .message-text {
+.page-home .home-message__text {
   line-height: 2.4;
   text-align: center;
   color: #fff;
 }
 
-
-/* brand---------------------------------------- */
-.index .brand {
+/* brand */
+.page-home .home-brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,43 +296,25 @@ footer .footer-copyright {
   padding: 10rem 0;
 }
 
-.index .brand .brand-container {
-  max-width: 120rem;
+.page-home .home-brand__inner {
+  max-width: 132rem;
   width: 100%;
   height: auto;
   padding: 0 6rem;
 }
 
-.index .section-title-other {
-  position: relative;
-  color: #6198FF;
-  font-size: 2.4rem;
-  font-weight: 500;
-  margin-bottom: 4.8rem;
-}
-
-.index .section-title-other::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 24rem;
-  background: linear-gradient(to right, #6198FF 0 30%, #fff 0 70%);
-}
-
-.index .brand .brand-content {
+.page-home .home-brand__content {
   display: flex;
   align-items: center;
   gap: 22.6rem;
 }
 
-.index .brand .brand-content .product-image {
+.page-home .home-brand__image {
   width: 35%;
   height: auto;
 }
 
-.index .brand .brand-catchcopy {
+.page-home .home-brand__headline {
   display: flex;
   flex-flow: column;
   font-size: 3.2rem;
@@ -299,24 +322,24 @@ footer .footer-copyright {
   margin-bottom: 4rem;
 }
 
-.index .brand .brand-description {
+.page-home .home-brand__description {
   display: flex;
   flex-flow: column;
   gap: 2rem;
 }
 
-.index .brand .brand-cta {
+.page-home .home-brand__cta {
   margin-top: 8rem;
   text-align: right;
 }
 
-.index .brand .brand-cta-link {
+.page-home .home-brand__cta-link {
   position: relative;
   display: inline-block;
   color: #5F79AA;
 }
 
-.index .brand .brand-cta-link::after {
+.page-home .home-brand__cta-link::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -328,59 +351,45 @@ footer .footer-copyright {
   transform: translate(1.2rem, 0.4rem);
 }
 
+
 /* news---------------------------------------- */
-.index .news {
+/* home-news の内側幅（前に入れていなければ） */
+.page-home .home-news {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  height: auto;
 }
 
-.index .news .news-container {
-  margin: 10rem 0 5rem 0;
-  max-width: 120rem;
+.page-home .home-news__inner {
+  max-width: 132rem;
   width: 100%;
   padding: 0 6rem;
+  margin: 10rem 0 5rem 0; /* 元の news-container 相当 */
 }
 
-.news .news-list {
+/* news list（元の .news .news-list 相当） */
+.page-home .news-list > li {
   margin-bottom: 3.2rem;
   padding-bottom: 1rem;
   border-bottom: solid 1px #D9D9D9;
 }
-
-.news .news-list:last-child {
+.page-home .news-list > li:last-child {
   margin-bottom: 0;
 }
 
-.news .news-item {
+/* meta（元の .news .news-item 相当） */
+.news-list__meta {
   display: flex;
-  justify-content: left;
   gap: 2.4rem;
 }
 
-.news .news-date {
+.news-list__date {
   font-size: 1.4rem;
   display: inline-block;
   width: 9rem;
 }
 
-.news .news-textlink {
-  display: block;
-  padding: 2rem 0 0 10.2rem;
-  margin: 0;
-  color: #101010;
-}
-
-.news .news-textlink:hover {
-  text-decoration: underline;
-  text-decoration-color: #6198FF;
-  color: #6198FF;
-  transition: 0.5s;
-}
-
-.news .news-category {
+.news-list__category {
   display: inline-block;
   width: 11.6rem;
   text-align: center;
@@ -391,9 +400,25 @@ footer .footer-copyright {
   border-radius: 2rem;
 }
 
+/* link（元の padding-left: 10.2rem を復元） */
+.news-list__link {
+  display: block;
+  padding: 2rem 0 0 10.2rem;
+  margin: 0;
+  color: #101010;
+}
 
-/* other---------------------------------------- */
-.index .other {
+.news-list__link:hover {
+  text-decoration: underline;
+  text-decoration-color: #6198FF;
+  color: #6198FF;
+  transition: 0.5s;
+}
+
+
+
+/* home-links---------------------------------------- */
+.page-home .home-links {
   margin: 5rem 0 10rem 0;
   width: 100%;
   height: auto;
@@ -402,18 +427,18 @@ footer .footer-copyright {
   align-items: center;
 }
 
-.index .other .other-container {
-  max-width: 120rem;
+.page-home .home-links__inner {
+  max-width: 132rem;
   width: 100%;
   padding: 0 6rem;
 }
 
-.index .other .other-content {
+.page-home .home-links__content {
   margin-top: 7rem;
   text-align: center;
 }
 
-.index .other .other-btn {
+.page-home .home-links__button {
   display: inline-block;
   width: 24rem;
   font-size: 2.4rem;
@@ -424,14 +449,14 @@ footer .footer-copyright {
   transition: 0.3s;
 }
 
-.index .other .other-btn:hover {
+.page-home .home-links__button:hover {
   color: #5F79AA;
   background-color: transparent;
   border: 1px solid #5F79AA;
   transition: 0.3s;
 }
 
-.index .other .other-btn:last-child {
+.page-home .home-links__button:last-child {
   margin-left: 16rem;
 }
 
@@ -869,28 +894,30 @@ footer .footer-copyright {
 /* #news --------------------------------------------------------------------------------*/
 /* .news---------------------------------------- */
 #news {
-  padding-top: 14rem;
+  padding-top: 14rem; /* 固定ヘッダー分 */
 }
 
-#news .news .news-container {
-  width: 100%;
+/* container の中央寄せ＋左右余白を復元（TOPと同じ 1200 幅の見え方） */
+#news .news-container {
   max-width: 120rem;
-  height: auto;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 6rem;
 }
 
+/* 2カラム（カテゴリボタン＋一覧）復元 */
 #news .news-content {
   display: flex;
   justify-content: space-between;
   gap: 0;
 }
 
-#news .news-content .news-category-buttons {
+#news .news-category-buttons {
   display: flex;
   flex-direction: column;
 }
 
-#news .news-content .news-category-buttons button {
+#news .news-category-buttons button {
   all: unset;
   padding: 2rem 0 2rem 2rem;
   background-color: #fff;
@@ -899,14 +926,66 @@ footer .footer-copyright {
   cursor: pointer;
 }
 
-#news .news-content .news-category-buttons .active {
+#news .news-category-buttons .active {
   border-left: 2px solid #709EFC;
 }
 
-#news .news-content .news-inner {
+/* 一覧領域 */
+#news .news-inner {
   width: 83%;
 }
 
+/* ここが重要：ニュースページは “ul.news-list が複数ある構造” なので ul に線を引く */
+#news .news-list {
+  margin-bottom: 3.2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #D9D9D9;
+}
+
+#news .news-list:last-child {
+  margin-bottom: 0;
+}
+
+/* meta 行（date + category） */
+#news .news-item {
+  display: flex;
+  justify-content: left;
+  gap: 2.4rem;
+}
+
+#news .news-date {
+  font-size: 1.4rem;
+  display: inline-block;
+  width: 9rem;
+}
+
+#news .news-category {
+  display: inline-block;
+  width: 11.6rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #6198FF;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+}
+
+/* タイトルリンク（左のメタ分だけインデント） */
+#news .news-textlink {
+  display: block;
+  padding: 2rem 0 0 10.2rem;
+  margin: 0;
+  color: #101010;
+}
+
+#news .news-textlink:hover {
+  text-decoration: underline;
+  text-decoration-color: #6198FF;
+  color: #6198FF;
+  transition: 0.5s;
+}
+
+/* pagination（元CSSのまま復元） */
 #news .pagination {
   margin: 6rem 0 10rem 0;
 }
@@ -917,11 +996,15 @@ footer .footer-copyright {
   gap: 3rem;
 }
 
-#news .pagination-list .page-prev, .page-link, .page-next {
+#news .pagination-list .page-prev,
+#news .pagination-list .page-link,
+#news .pagination-list .page-next {
   color: #6198FF;
 }
 
-#news .pagination-list:hover .page-prev:hover, .page-link:hover, .page-next:hover {
+#news .pagination-list .page-prev:hover,
+#news .pagination-list .page-link:hover,
+#news .pagination-list .page-next:hover {
   text-decoration: underline;
   text-decoration-color: #6198FF;
 }
