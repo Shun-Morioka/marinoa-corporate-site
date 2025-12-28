@@ -502,95 +502,105 @@ footer .site-footer__copyright {
 
 /* about --------------------------------------------------------------------------------*/
 
-/* mission---------------------------------------- */
-.about .mission {
-  margin: 15rem 0 10rem 0;
-  width: 100%;
+/* ページ全体 */
+.page-about {
+  padding-top: 15rem;
+  /* 固定ヘッダー(7.2rem)＋余白。既存の見え方に合わせて調整可 */
 }
 
-.about .mission-container {
+/* セクション共通：中央幅（いま mission-container 等でやっていた役割を統一） */
+.page-about .about-mission__inner,
+.page-about .about-vision__inner,
+.page-about .about-overview__inner,
+.page-about .about-history__inner {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
 }
 
-.about .mission-content {
+/* Mission ---------------------------------------- */
+.page-about .about-mission {
+  margin: 0 0 10rem 0;
+  width: 100%;
+}
+
+.page-about .about-mission__content {
   display: flex;
   align-items: center;
   gap: 17rem;
 }
 
-.about .mission-image-woman {
+.page-about .about-mission__image {
   width: 42rem;
 }
 
-.about .mission-catchcopy {
+.page-about .about-mission__catch {
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 4rem;
 }
 
-.about .mission-description {
+.page-about .about-mission__text {
   line-height: 2.4;
 }
 
-/* vision---------------------------------------- */
-.about .vision {
+/* Vision ---------------------------------------- */
+.page-about .about-vision {
   margin-bottom: 10rem;
   width: 100%;
 }
 
-.about .vision-container {
-  max-width: 120rem;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.about .vision-content {
+.page-about .about-vision__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
+  gap: 6rem;
+  /* 追加：間隔が詰まるのを防ぐ */
 }
 
-.about .vision-image-woman {
+.page-about .about-vision__image {
   width: 60rem;
 }
 
-.about .vision-catchcopy {
+.page-about .about-vision__catch {
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 4rem;
 }
 
-.about .vision-description {
+.page-about .about-vision__text {
   line-height: 2.4;
 }
 
-/* overview---------------------------------------- */
-.about .overview {
+/* Overview ---------------------------------------- */
+.page-about .about-overview {
   width: 100%;
   margin-bottom: 10rem;
 }
 
-.about .overview-container {
-  width: 100%;
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
-.about .overview-content {
+.page-about .about-overview__content {
   display: flex;
   justify-content: space-between;
+  gap: 6rem;
 }
 
-.about .overview-item {
+.page-about .about-overview__details {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-about .about-overview__list {
+  width: 100%;
+}
+
+.page-about .about-overview__item {
   padding-bottom: 0.5rem;
   margin-bottom: 3.2rem;
   position: relative;
 }
 
-.about .overview-item::after {
+.page-about .about-overview__item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -600,36 +610,86 @@ footer .site-footer__copyright {
   background: linear-gradient(to right, #709EFC 0 15%, #E8F0FF 0 70%);
 }
 
-.about .overview-item .label {
+.page-about .about-overview__label {
   display: inline-block;
   width: 16rem;
 }
 
-.about .overview-item address {
+.page-about .about-overview__position {
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
+.page-about .about-overview__address {
   font-style: normal;
   display: inline;
 }
 
-/* vision---------------------------------------- */
-.about .history {
+
+
+/* =========================================
+   About / Overview - Map（貼り替え専用）
+   ========================================= */
+
+/* 右カラム：Map全体 */
+.page-about .about-overview__map {
+  width: 48rem;
+  /* PC時：旧 480px 相当 */
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+/* Map見出し（会社情報の li とは完全に分離） */
+.page-about .about-overview__map-head {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 3.2rem;
+}
+
+/* 下線：既存 about-overview__item と同一デザイン */
+.page-about .about-overview__map-head::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right,
+      #709EFC 0 15%,
+      #E8F0FF 0 70%);
+}
+
+/* 「Map」ラベルの文字スタイル（既存と揃える） */
+.page-about .about-overview__map-head .about-overview__label {
+  display: inline-block;
+  width: 16rem;
+  font-weight: 400;
+}
+
+/* Google Map iframe */
+.page-about .about-overview__map-embed {
+  width: 100%;
+  aspect-ratio: 480 / 330;
+  /* 元の比率を維持 */
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+/* History ---------------------------------------- */
+.page-about .about-history {
   width: 100%;
   margin-bottom: 20rem;
 }
 
-.about .history-container {
-  width: 100%;
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
-.about .history-header {
+.page-about .about-history__head {
   position: relative;
   padding-bottom: 1rem;
   margin-bottom: 4rem;
   font-weight: 600;
 }
 
-.about .history-header::after {
+.page-about .about-history__head::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -639,20 +699,21 @@ footer .site-footer__copyright {
   background-color: #E8F0FF;
 }
 
-.about .history-header .year-label {
+.page-about .about-history__head-year {
   margin-left: 1.2rem;
 }
 
-.about .history-header .event-label {
+.page-about .about-history__head-event {
   margin-left: 13.3rem;
 }
 
-.about .history-list {
+.page-about .about-history__list {
   position: relative;
   height: auto;
 }
 
-.about .history-list::after {
+/* 縦ライン（旧 .history-list::after ） */
+.page-about .about-history__list::after {
   position: absolute;
   content: "";
   top: -42px;
@@ -662,17 +723,17 @@ footer .site-footer__copyright {
   background-color: #E8F0FF;
 }
 
-.about .history-item {
+.page-about .about-history__item {
   margin-bottom: 2.4rem;
 }
 
-.about .history-list .year {
+.page-about .about-history__year {
   display: inline-block;
   width: 16rem;
   position: relative;
 }
 
-.about .history-list .year::after {
+.page-about .about-history__year::after {
   position: absolute;
   content: "";
   z-index: 98;
@@ -684,6 +745,7 @@ footer .site-footer__copyright {
   border-radius: 20px;
   background-color: #709EFC;
 }
+
 
 /* brand --------------------------------------------------------------------------------*/
 
@@ -1639,6 +1701,59 @@ footer .site-footer__copyright {
   .page-home .home-links__button:last-child {
     margin-left: 6rem;
   }
+
+  .page-about .about-mission__inner,
+  .page-about .about-vision__inner,
+  .page-about .about-overview__inner,
+  .page-about .about-history__inner {
+    padding: 0 var(--gutter);
+  }
+
+  .page-about .about-mission__content {
+    gap: 6rem;
+  }
+
+  .page-about .about-vision__content {
+    gap: 6rem;
+  }
+
+  .page-about .about-overview__content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .page-about .about-mission__image {
+    width: 36rem;
+  }
+
+  .page-about .about-vision__image {
+    width: 52rem;
+  }
+
+  .page-about .about-overview__map {
+    width: 100%;
+  }
+  
+    .page-about .about-overview__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+    /* ラベルを横幅固定から解放 */
+  .page-about .about-overview__label {
+    width: auto;
+    font-weight: 600;
+  }
+ /* 役職・住所・本文すべて自然に折り返し */
+  .page-about .about-overview__position,
+  .page-about .about-overview__address {
+    display: block;
+  }
+
+  .page-about .about-overview__map-head .about-overview__label{
+    font-weight: 600;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1917,7 +2032,119 @@ footer .site-footer__copyright {
   .page-home .home-links__button:last-child {
     margin-left: 0;
   }
+
+  /* Mission：縦積み */
+  .page-about .about-mission__content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3.2rem;
+  }
+
+  .page-about .about-mission__image {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  /* Vision：縦積み（row-reverse解除して自然順） */
+  .page-about .about-vision__content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3.2rem;
+  }
+
+  .page-about .about-vision__image {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  /* Overview：縦積み（会社情報→Mapの順） */
+  .page-about .about-overview__content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  
+
+  .page-about .about-overview__map {
+    width: 100%;
+  }
+
+  /* Map見出し：専用要素がある前提（推奨）
+     例：<div class="about-overview__map-head"><span class="about-overview__label">Map</span></div>
+  */
+  .page-about .about-overview__map-head {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.6rem;
+    position: relative;
+  }
+
+  .page-about .about-overview__map-head::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #709EFC 0 15%, #E8F0FF 0 70%);
+  }
+
+  /* Map iframe：常に100%で比率維持 */
+  .page-about .about-overview__map-embed {
+    width: 100%;
+    height: auto;
+  }
+
+  /* History：はみ出しやすいので最低限だけ安全に */
+  .page-about .about-history__head-event {
+    margin-left: 7rem;
+    /* 画面が狭い時の詰め */
+  }
+
+  .page-about .about-history__list::after {
+    left: 7rem;
+    height: 55rem;
+    /* 縦ラインを内側へ */
+  }
+
+  .page-about .about-history__year {
+    width: 12rem;
+    /* 年のカラム幅を縮める */
+  }
+
+  .page-about .about-history__year::after {
+    left: 6.6rem;
+    /* ドット位置を合わせる */
+  }
+
+    /* History：年に本文が干渉しない折り返し（縦積みにしない） */
+  .page-about .about-history__item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 3.2rem; /* 年と本文の間隔 */
+  }
+
+    .page-about .about-history__year {
+    flex: 0 0 7rem;     /* 768以下では年の列を少し縮める（必要なら数値調整） */
+    width: 7rem;
+  }
+    .page-about .about-history__event {
+    flex: 1 1 auto;
+    min-width: 0;       /* 折り返し安定（これがないと崩れる場合がある） */
+    line-height: 1.8;
+    overflow-wrap: anywhere; /* 長い語や記号があってもはみ出しにくくする */
+  }
+
+    .page-about .about-history__event {
+    flex: 1 1 auto;
+    min-width: 0;       /* 折り返し安定（これがないと崩れる場合がある） */
+    line-height: 1.8;
+    overflow-wrap: anywhere; /* 長い語や記号があってもはみ出しにくくする */
+  }
+
 }
+
 
 @media (max-width: 480px) {
   footer .legal-nav__link {
@@ -1932,6 +2159,22 @@ footer .site-footer__copyright {
   footer .footer-nav__contact .footer-nav__link {
     padding-left: 0;
   }
+
+  .page-about .about-mission__catch,
+  .page-about .about-vision__catch {
+    font-size: 2.6rem;
+  }
+
+  .page-about .about-overview__label {
+    width: 12rem;
+    /* ラベル幅をさらに縮める */
+  }
+
+   .page-about .about-history__list::after {
+    height: 70rem;
+    /* 縦ラインを内側へ */
+  }
+
 
 }
 
@@ -1957,11 +2200,3 @@ footer .site-footer__copyright {
 
 
 }
-
-/* メモ
-・ヘッダーはハンバーガー
-・メッセージは他同様、幅調整
-・ブランドも同様
-・ニュースは文字の大きさ小さく１行に収まるように
-・フッターはデザインカンプ通りに改修
-*/
