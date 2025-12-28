@@ -50,6 +50,12 @@
           <li class="global-nav__item"><a href="./contact.html" class="global-nav__link">お問い合わせ</a></li>
         </ul>
       </nav>
+        <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+        <span class="hamberger-toggle__line"></span>
+        <span class="hamberger-toggle__line"></span>
+        <span class="hamberger-toggle__line"></span>
+      </button>
+
     </div>
   </header>
 
@@ -340,6 +346,18 @@
       </div>
     </div>
   </footer>
+    <script>
+    const toggleButton = document.querySelector('.hamberger-toggle');
+    const globalNav = document.querySelector('.global-nav');
+    const headerInner = document.querySelector('.site-header__inner');
+
+    toggleButton.addEventListener('click', () => {
+     const isOpen = globalNav.classList.toggle('is-open');
+      document.body.classList.toggle('is-open', isOpen);
+      headerInner.classList.toggle('is-open', isOpen);
+      toggleButton.setAttribute('aria-expanded', isOpen);
+    })
+  </script>
 </body>
 
 </html>
