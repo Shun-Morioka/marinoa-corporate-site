@@ -8,7 +8,6 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="icon" href="./images/common/favicon/favicon.ico">
 
-
   <!-- OPG関連 ------------------------------------------------------------------------>
   <!-- ウェブクリップアイコンの設定 -->
   <link rel="apple-touch-icon" href="./images/common/WebClipIcon/Marinoa_webclip.png">
@@ -41,7 +40,7 @@
         </a>
       </h1>
 
-      <nav class="global-nav" aria-label="グローバルナビゲーション">
+      <nav id="global-nav" class="global-nav" aria-label="グローバルナビゲーション">
         <ul class="global-nav__list">
           <li class="global-nav__item"><a href="./about.html" class="global-nav__link">会社概要</a></li>
           <li class="global-nav__item"><a href="./brand.html" class="global-nav__link">ブランド</a></li>
@@ -59,19 +58,23 @@
     </div>
   </header>
 
-  <main class="about">
-    <section class="mission">
-      <div class="mission-container">
-        <h3 class="section-title">Mission</h3>
-        <div class="mission-content">
-          <img src="./images/about/Mission/woman_01_856*1038.webp" class="mission-image-woman"
+  <main class="page-about">
+
+    <section class="about-mission">
+      <div class="about-mission__inner">
+        <h2 class="section-title">Mission</h2>
+
+        <div class="about-mission__content">
+          <img src="./images/about/Mission/woman_01_856*1038.webp" class="about-mission__image"
             alt="健やかな素肌を大切にするスキンケア中の女性">
-          <div class="mission-textbox">
-            <h4 class="mission-catchcopy">
+
+          <div class="about-mission__body">
+            <p class="about-mission__catch">
               肌に、寄り添う。<br>
               心まで、うるおう。<br>
-            </h4>
-            <p class="mission-description">
+            </p>
+
+            <p class="about-mission__text">
               わたしたちは、敏感肌や乾燥に悩むすべての人へ、<br>
               自分に合うスキンケアとの出会いと、安心を届ける存在でありたい。<br>
               毎日をもっと心地よく、自分らしく過ごせるように。<br>
@@ -82,100 +85,115 @@
       </div>
     </section>
 
-    <section class="vision">
-      <div class="vision-container">
-        <h3 class="section-title">Vision</h3>
-        <article class="vision-content">
-          <img src="./images/about/Vision/woman_02_1202*742.webp" class="vision-image-woman"
+    <section class="about-vision">
+      <div class="about-vision__inner">
+        <h2 class="section-title">Vision</h2>
+
+        <div class="about-vision__content">
+          <img src="./images/about/Vision/woman_02_1202*742.webp" class="about-vision__image"
             alt="健やかな素肌を大切にする企業理念を象徴するスキンケア中の女性">
-          <div class="vision-textbox">
-            <h4 class="vision-catchcopy">
+
+          <div class="about-vision__body">
+            <p class="about-vision__catch">
               すべての人に、<br>
               “やさしい選択肢”を。<br>
-            </h4>
-            <div>
-              <p class="vision-description">
-                スキンケアは、肌質や時間に縛られるものであってはならない。<br>
-                Marinoaは、どんな肌にもフィットするやさしさを届け、<br>
-                未来のスタンダードを創ります。<br>
-              </p>
-            </div>
+            </p>
+
+            <p class="about-vision__text">
+              スキンケアは、肌質や時間に縛られるものであってはならない。<br>
+              Marinoaは、どんな肌にもフィットするやさしさを届け、<br>
+              未来のスタンダードを創ります。<br>
+            </p>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="overview">
-      <div class="overview-container">
-        <h3 class="section-title">Overview</h3>
-        <div class="overview-content">
-          <ul class="overview-list">
-            <li class="overview-item"><span class="label">会社名</span>MARINOA株式会社</li>
-            <li class="overview-item"><span class="label">設立</span>2023年4月1日</li>
-            <li class="overview-item"><span class="label">代表者名</span><span class="potision">代表取締役社長</span>白石 優香（しらいし
-              ゆうか）</li>
-            <li class="overview-item"><span class="label">所在地</span>
-              <address>〒150-0031 東京都渋谷区桜丘町12-10 渋谷インプレイス6F</address>
+    <section class="about-overview">
+      <div class="about-overview__inner">
+        <h2 class="section-title">Overview</h2>
+
+        <div class="about-overview__content">
+          <!-- 左：会社情報 -->
+          <ul class="about-overview__list">
+            <li class="about-overview__item"><span class="about-overview__label">会社名</span>MARINOA株式会社</li>
+            <li class="about-overview__item"><span class="about-overview__label">設立</span>2023年4月1日</li>
+            <li class="about-overview__item">
+              <span class="about-overview__label">代表者名</span>
+              <span class="about-overview__position">代表取締役社長</span>
+              白石 優香（しらいし ゆうか）
             </li>
-            <li class="overview-item"><span class="label">連絡先</span>TEL：03-1234-5678 / Email：info@marinoa.co.jp</li>
-            <li class="overview-item"><span class="label">事業内容</span>スキンケア商品の企画・開発・販売</li>
-            <li class="overview-item"><span class="label">資本金</span>1,000万円</li>
-            <li class="overview-item"><span class="label">従業員数</span>18名（2025年5月現在）</li>
-            <li class="overview-item"><span class="label">取引銀行</span>みずほ銀行 渋谷支店</li>
+            <li class="about-overview__item">
+              <span class="about-overview__label">所在地</span>
+              <address class="about-overview__address">〒150-0031 東京都渋谷区桜丘町12-10 渋谷インプレイス6F</address>
+            </li>
+            <li class="about-overview__item"><span class="about-overview__label">連絡先</span>TEL：03-1234-5678 /
+              Email：info@marinoa.co.jp</li>
+            <li class="about-overview__item"><span class="about-overview__label">事業内容</span>スキンケア商品の企画・開発・販売</li>
+            <li class="about-overview__item"><span class="about-overview__label">資本金</span>1,000万円</li>
+            <li class="about-overview__item"><span class="about-overview__label">従業員数</span>18名（2025年5月現在）</li>
+            <li class="about-overview__item"><span class="about-overview__label">取引銀行</span>みずほ銀行 渋谷支店</li>
           </ul>
-          <ul class="overview-list">
-            <li class="overview-item"><span class="label">Map</span>
-            </li>
+
+          <!-- 右：Map（見出しは専用クラスに分離） -->
+          <div class="about-overview__map">
+            <div class="about-overview__map-head">
+              <span class="about-overview__label">Map</span>
+            </div>
+
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1037.6335823461657!2d139.70057250669257!3d35.654575445853254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5a0a8d4fad%3A0xddbbadd7915a368d!2z44CSMTUwLTAwMzEg5p2x5Lqs6YO95riL6LC35Yy65qGc5LiY55S677yR77yS4oiS77yR77yQIOa4i-iwt-OCpOODs-ODleOCqeOCueOCouODjeODg-OCr-OCuQ!5e0!3m2!1sja!2sjp!4v1758106221617!5m2!1sja!2sjp"
-              class="overview-map" width="480" height="330" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              class="about-overview__map-embed" width="480" height="330" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-history">
+      <div class="about-history__inner">
+        <h2 class="section-title">History</h2>
+
+        <div class="about-history__content">
+          <div class="about-history__head">
+            <span class="about-history__head-year">年</span>
+            <span class="about-history__head-event">出来事</span>
+          </div>
+
+          <ul class="about-history__list">
+            <li class="about-history__item">
+              <span class="about-history__year">2023</span>
+              <span class="about-history__event">東京都にてマリノア株式会社を設立。</span>
+            </li>
+            <li class="about-history__item">
+              <span class="about-history__year">2023</span>
+              <span class="about-history__event">自社初の製品となる「ディープハイドレーションシリーズ」を発売。</span>
+            </li>
+            <li class="about-history__item">
+              <span class="about-history__year">2024</span>
+              <span class="about-history__event">公式オンラインストアを開設し、全国への販売を開始。</span>
+            </li>
+            <li class="about-history__item">
+              <span class="about-history__year">2024</span>
+              <span class="about-history__event">主力商品「ハイドラバランストナー」が美容雑誌に掲載され話題に。</span>
+            </li>
+            <li class="about-history__item">
+              <span class="about-history__year">2025</span>
+              <span class="about-history__event">商品開発体制強化のため、研究開発部門（R&amp;D）を社内に設置。</span>
+            </li>
+            <li class="about-history__item">
+              <span class="about-history__year">2025</span>
+              <span class="about-history__event">東京・表参道にブランド初の直営店をオープン。</span>
+            </li>
+            <li class="about-history__item">
+              <span class="about-history__year">2025</span>
+              <span class="about-history__event">海外（アジア・北米）への展開を開始し、国際配送に対応。</span>
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="history">
-      <div class="history-container">
-        <h3 class="section-title">History</h3>
-        <div class="histry-content">
-          <div class="history-header">
-            <span class="year-label">年</span>
-            <span class="event-label">出来事</span>
-          </div>
-          <ul class="history-list">
-            <li class="history-item">
-              <span class="year">2023</span>
-              <span class="event">東京都にてマリノア株式会社を設立。</span>
-            </li>
-            <li class="history-item">
-              <span class="year">2023</span>
-              <span class="event">自社初の製品となる「ディープハイドレーションシリーズ」を発売。</span>
-            </li>
-            <li class="history-item">
-              <span class="year">2024</span>
-              <span class="event">公式オンラインストアを開設し、全国への販売を開始。</span>
-            </li>
-            <li class="history-item">
-              <span class="year">2024</span>
-              <span class="event">主力商品「ハイドラバランストナー」が美容雑誌に掲載され話題に。</span>
-            </li>
-            <li class="history-item">
-              <span class="year">2025</span>
-              <span class="event">商品開発体制強化のため、研究開発部門（R&D）を社内に設置。</span>
-            </li>
-            <li class="history-item">
-              <span class="year">2025</span>
-              <span class="event">東京・表参道にブランド初の直営店をオープン。</span>
-            </li>
-            <li class="history-item">
-              <span class="year">2025</span>
-              <span class="event">海外（アジア・北米）への展開を開始し、国際配送に対応。</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
