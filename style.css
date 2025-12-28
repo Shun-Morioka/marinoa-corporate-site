@@ -383,7 +383,7 @@ footer .site-footer__copyright {
   right: 0;
   width: 3rem;
   height: 3rem;
-  background-image: url("/images/top/brand/Arrow_blue.svg");
+  background-image: url("./images/top/brand/Arrow_blue.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1718,7 +1718,7 @@ footer .site-footer__copyright {
     padding: 4px;
     background-color: transparent;
     border: none;
- 
+    touch-action: manipulation;
   }
 
   .hamberger-toggle__line {
@@ -1727,7 +1727,7 @@ footer .site-footer__copyright {
     height: 3px;
     border-radius: 2px;
     border: 0.2px solid #C6C6C6;
-       transition: 0.2s;
+    transition: 0.2s;
   }
 
   .site-footer {
