@@ -50,6 +50,12 @@
           <li class="global-nav__item"><a href="./contact.html" class="global-nav__link">お問い合わせ</a></li>
         </ul>
       </nav>
+      <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false"
+        aria-label="メニューを開く">
+        <span class="hamberger-toggle__line"></span>
+        <span class="hamberger-toggle__line"></span>
+        <span class="hamberger-toggle__line"></span>
+      </button>
     </div>
   </header>
 
@@ -121,9 +127,9 @@
             <li class="overview-item"><span class="label">Map</span>
             </li>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1037.6335823461657!2d139.70057250669257!3d35.654575445853254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5a0a8d4fad%3A0xddbbadd7915a368d!2z44CSMTUwLTAwMzEg5p2x5Lqs6YO95riL6LC35Yy65qGc5LiY55S677yR77yS4oiS77yR77yQIOa4i-iwt-OCpOODs-ODleOCqeOCueOCouODjeODg-OCr-OCuQ!5e0!3m2!1sja!2sjp!4v1758106221617!5m2!1sja!2sjp"
-                class="overview-map" width="480" height="330" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1037.6335823461657!2d139.70057250669257!3d35.654575445853254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5a0a8d4fad%3A0xddbbadd7915a368d!2z44CSMTUwLTAwMzEg5p2x5Lqs6YO95riL6LC35Yy65qGc5LiY55S677yR77yS4oiS77yR77yQIOa4i-iwt-OCpOODs-ODleOCqeOCueOCouODjeODg-OCr-OCuQ!5e0!3m2!1sja!2sjp!4v1758106221617!5m2!1sja!2sjp"
+              class="overview-map" width="480" height="330" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </ul>
         </div>
       </div>
@@ -172,7 +178,7 @@
     </section>
   </main>
 
-   <footer class="site-footer">
+  <footer class="site-footer">
     <div class="site-footer__inner">
       <img src="./images/common/footer/corporate_logo_blue.svg" class="site-footer__logo" alt="株式会社MARINOA">
 
@@ -241,6 +247,19 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const toggleButton = document.querySelector('.hamberger-toggle');
+    const globalNav = document.querySelector('.global-nav');
+    const headerInner = document.querySelector('.site-header__inner');
+
+    toggleButton.addEventListener('click', () => {
+      const isOpen = globalNav.classList.toggle('is-open');
+      document.body.classList.toggle('is-open', isOpen);
+      headerInner.classList.toggle('is-open', isOpen);
+      toggleButton.setAttribute('aria-expanded', isOpen);
+    })
+  </script>
 </body>
 
 </html>
