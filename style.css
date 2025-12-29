@@ -565,9 +565,15 @@ footer .site-footer__copyright {
   gap: 17rem;
 }
 
-.page-about .about-mission__image {
+.page-about .about-mission__image-pc {
   width: 42rem;
 }
+
+
+.page-about .about-mission__image-sp {
+  display: none;
+}
+
 
 .page-about .about-mission__catch {
   font-size: 3.2rem;
@@ -1802,7 +1808,7 @@ footer .site-footer__copyright {
     gap: 0;
   }
 
-  .page-about .about-mission__image {
+  .page-about .about-mission__image-sp {
     width: 36rem;
   }
 
@@ -2185,7 +2191,12 @@ footer .site-footer__copyright {
     gap: 3.2rem;
   }
 
-  .page-about .about-mission__image {
+    .page-about .about-mission__image-pc {
+    display: none;
+  }
+
+  .page-about .about-mission__image-sp {
+    display: block;
     width: 100%;
     max-width: 48rem;
     margin: 0 auto;
