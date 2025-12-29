@@ -791,21 +791,19 @@ footer .site-footer__copyright {
 
 
 /* ==================================================================================================================
-   ブランド
+   ブランド（新HTML対応：見た目は現状維持）
    ================================================================================================================== */
-/* mv---------------------------------------- */
 
-.brand .mv-img {
+
+/* hero / MV（旧：.brand .mv-img → 新：.brand-hero__image） */
+.page-brand .brand-hero__image {
   width: 100%;
   height: auto;
   display: block;
 }
 
-
-
-
-/* intro---------------------------------------- */
-.brand .intro {
+/* Intro（旧：.brand .intro〜 → 新：.brand-intro〜） */
+.page-brand .brand-intro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -814,20 +812,20 @@ footer .site-footer__copyright {
   margin: 10rem 0;
 }
 
-.brand .intro-container {
+.page-brand .brand-intro__inner {
   width: 100%;
   max-width: 120rem;
   height: auto;
   position: relative;
 }
 
-.brand .intro-content {
+.page-brand .brand-intro__content {
   display: flex;
   align-items: center;
   gap: 22.6rem;
 }
 
-.brand .intro-content::after {
+.page-brand .brand-intro__content::after {
   content: "";
   position: absolute;
   left: 62.5rem;
@@ -842,12 +840,12 @@ footer .site-footer__copyright {
   z-index: -100;
 }
 
-.brand .intro-content .product-image {
+.page-brand .brand-intro__product-image {
   width: 40rem;
   height: auto;
 }
 
-.brand .intro-catchcopy {
+.page-brand .brand-intro__catchcopy {
   display: flex;
   flex-flow: column;
   font-size: 3.2rem;
@@ -855,19 +853,19 @@ footer .site-footer__copyright {
   margin-bottom: 4rem;
 }
 
-.brand .intro-description {
+.page-brand .brand-intro__description {
   display: flex;
   flex-flow: column;
   gap: 2rem;
 }
 
-.brand .intro-cta {
+.page-brand .brand-intro__cta {
   margin-top: 8rem;
   position: relative;
   text-align: center;
 }
 
-.brand .intro-cta-link {
+.page-brand .brand-intro__cta-link {
   color: #fff;
   padding: 1.6rem 4.8rem;
   border: 1px solid #5F79AA;
@@ -875,34 +873,31 @@ footer .site-footer__copyright {
   transition: 0.5s;
 }
 
-.brand .intro-cta-link:hover {
+.page-brand .brand-intro__cta-link:hover {
   color: #5F79AA;
   border: 1px solid #5F79AA;
   background-color: transparent;
   transition: 0.5s;
 }
 
-
-
-
-/* Quality---------------------------------------- */
-.brand .quality {
+/* Quality（旧：.brand .quality〜 → 新：.brand-quality〜） */
+.page-brand .brand-quality {
   margin-bottom: 10rem;
   width: 100%;
 }
 
-.brand .quality-container {
+.page-brand .brand-quality__inner {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
 }
 
-.brand .quality-list {
+.page-brand .brand-quality__list {
   display: flex;
   justify-content: space-between;
 }
 
-.brand .quality-item {
+.page-brand .brand-quality__item {
   padding: 3rem 3rem;
   display: flex;
   flex-direction: column;
@@ -913,45 +908,24 @@ footer .site-footer__copyright {
   border: #B0BCD4 1px solid;
 }
 
-.brand .quality-item-title {
+.page-brand .brand-quality__title {
   text-align: justify;
   font-size: 2.2rem;
 }
 
-.brand .quality-img {
+.page-brand .brand-quality__image {
   width: 15.6rem;
   height: auto;
 }
 
-.brand .quality-text {
+.page-brand .brand-quality__text {
   font-size: 1.2rem;
   text-align: justify;
   line-height: 2rem;
 }
 
-
-
-
-/* Parallax---------------------------------------- */
-.brand .parallax {
-  width: 100%;
-  height: 40rem;
-  background-image: url("./images/brand/parallax/ocean_3024*1616.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.brand .parallax-img {
-  width: 100%;
-  height: auto;
-}
-
-
-
-
-/* new---------------------------------------- */
-.brand .new {
+/* New（旧：.brand .new〜 → 新：.brand-new〜） */
+.page-brand .brand-new {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -960,20 +934,20 @@ footer .site-footer__copyright {
   margin: 10rem 0;
 }
 
-.brand .new-container {
+.page-brand .brand-new__inner {
   width: 100%;
   max-width: 120rem;
   height: auto;
 }
 
-.brand .new-content {
+.page-brand .brand-new__content {
   display: flex;
   align-items: center;
   gap: 22.6rem;
   position: relative;
 }
 
-.brand .new-content::after {
+.page-brand .brand-new__content::after {
   content: "";
   position: absolute;
   left: 64.5rem;
@@ -988,18 +962,18 @@ footer .site-footer__copyright {
   z-index: -100;
 }
 
-
-.brand .new-content .product-image {
-  width: 42rem;
+.page-brand .brand-new__product-image {
+  width: 40rem;
   height: auto;
 }
 
-.brand .new-textbox {
+.page-brand .brand-new__body {
   position: relative;
   text-align: left;
 }
 
-.brand .new-textbox::after {
+/* 旧：.brand .new-textbox::after は “width:auto” で効きが不安定なので、現状維持しつつ安全側の値に寄せる */
+.page-brand .brand-new__body::after {
   position: absolute;
   content: "";
   background-image: url("./images/brand/new/corporate_logo_black.svg");
@@ -1010,7 +984,7 @@ footer .site-footer__copyright {
   height: 10rem;
 }
 
-.brand .new-catchcopy {
+.page-brand .brand-new__catchcopy {
   display: flex;
   flex-flow: column;
   font-size: 3.2rem;
@@ -1018,20 +992,20 @@ footer .site-footer__copyright {
   margin-bottom: 4rem;
 }
 
-.brand .new-description {
+.page-brand .brand-new__description {
   text-align: justify;
   display: flex;
   flex-flow: column;
   gap: 2rem;
 }
 
-.brand .new-cta {
+.page-brand .brand-new__cta {
   margin-top: 6rem;
   height: auto;
   text-align: center;
 }
 
-.brand .new-cta-link {
+.page-brand .brand-new__cta-link {
   display: inline-block;
   padding: 1.6rem 4.8rem;
   color: #fff;
@@ -1040,11 +1014,28 @@ footer .site-footer__copyright {
   transition: 0.5s;
 }
 
-.brand .new-cta-link:hover {
+.page-brand .brand-new__cta-link:hover {
   color: #5F79AA;
   border: 1px solid #5F79AA;
   background-color: transparent;
   transition: 0.5s;
+}
+
+/* Brand：Intro/New の画像サイズを同条件で固定（flexで縮まないようにする） */
+.page-brand .brand-intro__product-image,
+.page-brand .brand-new__product-image {
+  flex: 0 0 40rem;     /* 幅40remを“固定” */
+  width: 40rem;        /* 念のため明示 */
+  max-width: 40rem;    /* 想定外の上書き対策 */
+  flex-shrink: 0;      /* これが重要：画像を縮ませない */
+  height: auto;
+}
+
+/* 右側テキストは伸縮させる（画像を守る） */
+.page-brand .brand-intro__body,
+.page-brand .brand-new__body {
+  flex: 1 1 auto;
+  min-width: 0;        /* 折り返しを安定させ、画像が縮むのを防ぐ */
 }
 
 
@@ -1842,6 +1833,49 @@ footer .site-footer__copyright {
     font-weight: 600;
   }
 
+  /* Brandのinnerにも左右余白を付ける（他ページと統一） */
+  .page-brand .brand-intro__inner,
+  .page-brand .brand-quality__inner,
+  .page-brand .brand-new__inner {
+    padding: 0 var(--gutter);
+  }
+
+  /* Intro：余白を詰めて画像サイズを安定させる */
+  .page-brand .brand-intro__content {
+    gap: 6rem;
+  }
+
+  .page-brand .brand-intro__product-image {
+    width: 36rem;
+  }
+
+  /* New：余白を詰めて画像サイズを安定させる */
+  .page-brand .brand-new__content {
+    gap: 6rem;
+  }
+
+  .page-brand .brand-new__product-image {
+    width: 36rem;
+  }
+
+  /* Quality：3カラムのまま、間隔だけ詰める */
+  .page-brand .brand-quality__list {
+    gap: 2.4rem;
+  }
+
+  .page-brand .brand-quality__item {
+    width: 33.333%;
+    padding: 2.4rem;
+  }
+
+    .page-brand .brand-intro__product-image,
+  .page-brand .brand-new__product-image {
+    flex: 0 0 36rem;
+    width: 36rem;
+    max-width: 36rem;
+    flex-shrink: 0;
+  }
+
   /* 余白は他ページと揃える（既に :root の --gutter が 3.2rem になる想定） */
   .page-news .news__inner {
     padding: 0 var(--gutter);
@@ -2191,7 +2225,7 @@ footer .site-footer__copyright {
     gap: 3.2rem;
   }
 
-    .page-about .about-mission__image-pc {
+  .page-about .about-mission__image-pc {
     display: none;
   }
 
@@ -2220,8 +2254,6 @@ footer .site-footer__copyright {
     flex-direction: column;
     gap: 0;
   }
-
-
 
   .page-about .about-overview__map {
     width: 100%;
@@ -2304,6 +2336,74 @@ footer .site-footer__copyright {
     line-height: 1.8;
     overflow-wrap: anywhere;
     /* 長い語や記号があってもはみ出しにくくする */
+  }
+
+    /* Intro：縦積み */
+  .page-brand .brand-intro {
+    margin: 6rem 0;
+  }
+
+  .page-brand .brand-intro__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  .page-brand .brand-intro__product-image {
+    width: min(42rem, 100%);
+  }
+
+  /* 背景ロゴ（::after）はSPでレイアウト崩れの原因になるので非表示 */
+  .page-brand .brand-intro__content::after {
+    content: none;
+  }
+
+  .page-brand .brand-intro__cta {
+    margin-top: 4rem;
+  }
+
+  /* Quality：1カラム（カードを縦積み） */
+  .page-brand .brand-quality {
+    margin-bottom: 6rem;
+  }
+
+  .page-brand .brand-quality__list {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .page-brand .brand-quality__item {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  /* New：縦積み */
+  .page-brand .brand-new {
+    margin: 6rem 0;
+  }
+
+  .page-brand .brand-new__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  .page-brand .brand-new__product-image {
+    width: min(42rem, 100%);
+  }
+
+  .page-brand .brand-new__content::after {
+    content: none;
+  }
+
+  /* 不安定な装飾（width:auto）なのでSPでは無効化して安全に */
+  .page-brand .brand-new__body::after {
+    content: none;
+  }
+
+  .page-brand .brand-new__cta {
+    margin-top: 4rem;
   }
 
   /* リンクの左インデントを解除（TOPニュースと同じ方針） */
@@ -2431,6 +2531,30 @@ footer .site-footer__copyright {
   .page-about .about-history__list::after {
     height: 70rem;
     /* 縦ラインを内側へ */
+  }
+
+    .page-brand .brand-intro__catchcopy,
+  .page-brand .brand-new__catchcopy {
+    font-size: 2.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .page-brand .brand-quality__title {
+    font-size: 2rem;
+  }
+
+  .page-brand .brand-quality__text {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  .page-brand .brand-intro__cta-link,
+  .page-brand .brand-new__cta-link {
+    display: inline-block;
+    width: 100%;
+    max-width: 32rem;
+    text-align: center;
+    padding: 1.4rem 0;
   }
 
   .contact-form__agree-label {
