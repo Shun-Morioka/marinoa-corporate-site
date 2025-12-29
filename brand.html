@@ -30,7 +30,7 @@
 
 <body>
 
-   <header class="site-header site-header--home">
+  <header class="site-header site-header--home">
     <div class="site-header__inner">
       <h1 class="site-header__logo">
         <a href="./index.html">
@@ -48,7 +48,8 @@
         </ul>
       </nav>
 
-        <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+      <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false"
+        aria-label="メニューを開く">
         <span class="hamberger-toggle__line"></span>
         <span class="hamberger-toggle__line"></span>
         <span class="hamberger-toggle__line"></span>
@@ -56,91 +57,126 @@
     </div>
   </header>
 
-  <main class="brand">
-    <section class="mv">
-      <img src="./images/brand/MV/brand_MV_3023*1692.webp" class="mv-img" alt="潤い、それは心の変化と書かれた水色に透き通る清潔感のあるブランドイメージ画像">
+  <main class="page-brand">
+    <!-- Hero / MV -->
+    <section class="brand-hero" aria-label="ブランドのメインビジュアル">
+      <div class="brand-hero__media">
+        <img src="./images/brand/MV/brand_MV_3023*1692.webp" class="brand-hero__image"
+          alt="潤い、それは心の変化と書かれた水色に透き通る清潔感のあるブランドイメージ画像" />
+      </div>
     </section>
 
-    <section class="intro">
-      <div class="intro-container">
-        <h3 class="section-title">Brand</h3>
-        <article class="intro-content">
-          <img src="./images/brand/brand/brand_HydratingLotion_836*1120.webp" class="product-image"
-            alt="Marinoaの化粧水の商品イメージ画像">
-          <div class="intro-textbox">
-            <h4 class="intro-catchcopy">潤い、<span>それは心の変化。</span></h4>
-            <div class="intro-description">
+    <!-- Intro -->
+    <section class="brand-intro" aria-labelledby="brand-intro-title">
+      <div class="brand-intro__inner">
+        <h2 id="brand-intro-title" class="section-title">Brand</h2>
+
+        <article class="brand-intro__content">
+          <div class="brand-intro__media">
+            <img src="./images/brand/brand/brand_HydratingLotion_836*1120.webp" class="brand-intro__product-image"
+              alt="Marinoaの化粧水の商品イメージ画像" />
+          </div>
+
+          <div class="brand-intro__body">
+            <h3 class="brand-intro__catchcopy">
+              潤い、<span class="brand-intro__catchcopy-emphasis">それは心の変化。</span>
+            </h3>
+
+            <div class="brand-intro__description">
               <p>Marinoaは、あなたの肌に深い潤いを与え、心にも余裕をもたらすスキンケアブランド。</p>
               <p>肌荒れや乾燥に悩むことなく、毎日をもっと楽に過ごせるように。</p>
               <p>使うたびに、肌の調子が整い、心が軽くなる。</p>
             </div>
-            <div class="intro-cta">
-              <a href="/" class="intro-cta-link">詳しく見る</a>
+
+            <div class="brand-intro__cta">
+              <a href="/" class="brand-intro__cta-link">詳しく見る</a>
             </div>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- Quality -->
+    <section class="brand-quality" aria-labelledby="brand-quality-title">
+      <div class="brand-quality__inner">
+        <h2 id="brand-quality-title" class="section-title">Quality</h2>
 
-    <section class="quality">
-      <div class="quality-container">
-        <h3 class="section-title">Quality</h3>
-        <div class="quality-content">
-          <ul class="quality-list">
-            <li class="quality-item">
-              <p class="quality-item-title">
-                敏感肌に寄り添う、<br>
-                天然由来のやさしさ<br>
+        <div class="brand-quality__content">
+          <ul class="brand-quality__list">
+            <li class="brand-quality__item">
+              <p class="brand-quality__title">
+                敏感肌に寄り添う、<br />
+                天然由来のやさしさ<br />
               </p>
-              <img src="./images/brand/quality/drop_01_312*473.png" class="quality-img" alt="水滴が滴り落ちる葉っぱ">
-              <p class="quality-text">MARINOAの全製品は、植物由来の保湿成分や低刺激の処方をベースに開発。乾燥や肌荒れに悩む敏感肌にも使いやすく、肌への刺激を最小限に抑えています。</p>
+              <img src="./images/brand/quality/drop_01_312*473.png" class="brand-quality__image" alt="水滴が滴り落ちる葉っぱ" />
+              <p class="brand-quality__text">
+                MARINOAの全製品は、植物由来の保湿成分や低刺激の処方をベースに開発。乾燥や肌荒れに悩む敏感肌にも使いやすく、肌への刺激を最小限に抑えています。
+              </p>
             </li>
-            <li class="quality-item">
-              <p class="quality-item-title">
-                夜から朝まで続く、<br>
-                深いうるおい設計<br>
+
+            <li class="brand-quality__item">
+              <p class="brand-quality__title">
+                夜から朝まで続く、<br />
+                深いうるおい設計<br />
               </p>
-              <img src="./images/brand/quality/drop_02_312*473.png" class="quality-img" alt="スキンケア後の肌が潤い笑顔の女性">
-              <p class="quality-text">化粧水・乳液・保湿クリームの3ステップで、睡眠中も肌のうるおいを保ちます。朝までしっとり感が続き、翌朝の肌に違いを感じられる保湿力が特徴です。</p>
+              <img src="./images/brand/quality/drop_02_312*473.png" class="brand-quality__image"
+                alt="スキンケア後の肌が潤い笑顔の女性" />
+              <p class="brand-quality__text">
+                化粧水・乳液・保湿クリームの3ステップで、睡眠中も肌のうるおいを保ちます。朝までしっとり感が続き、翌朝の肌に違いを感じられる保湿力が特徴です。
+              </p>
             </li>
-            <li class="quality-item">
-              <p class="quality-item-title">
-                シンプルケアで、<br>
-                毎日をより快適に<br>
+
+            <li class="brand-quality__item">
+              <p class="brand-quality__title">
+                シンプルケアで、<br />
+                毎日をより快適に<br />
               </p>
-              <img src="./images/brand/quality/drop_03_312*473.png" class="quality-img" alt="MARINOAの化粧水・乳液・クリームの商品写真">
-              <p class="quality-text">最小限の手順で効果が実感できるシンプルケアを実現。短時間で肌が整い、心にも余裕が生まれます。マリノアは「続けられるやさしさ」を大切にしています。</p>
+              <img src="./images/brand/quality/drop_03_312*473.png" class="brand-quality__image"
+                alt="MARINOAの化粧水・乳液・クリームの商品写真" />
+              <p class="brand-quality__text">
+                最小限の手順で効果が実感できるシンプルケアを実現。短時間で肌が整い、心にも余裕が生まれます。マリノアは「続けられるやさしさ」を大切にしています。
+              </p>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- <section class="parallax">
-    </section> -->
+    <!-- New -->
+    <section class="brand-new" aria-labelledby="brand-new-title">
+      <div class="brand-new__inner">
+        <h2 id="brand-new-title" class="section-title">New</h2>
 
-    <section class="new">
-      <div class="new-container">
-        <h3 class="section-title">New</h3>
-        <article class="new-content">
-          <img src="./images/brand/new/MoisturingFaceMask_800*1070.webp" class="product-image"
-            alt="Marinoaのフェイスパックの商品イメージ画像">
-          <div class="new-textbox">
-            <h4 class="new-catchcopy">新しい夜の習慣に。<span>MARINOAのフェイスマスク、誕生。</span></h4>
-            <div class="new-description">
+        <article class="brand-new__content">
+          <div class="brand-new__media">
+            <img src="./images/brand/new/MoisturingFaceMask_800*1070.webp" class="brand-new__product-image"
+              alt="Marinoaのフェイスパックの商品イメージ画像" />
+          </div>
+
+          <div class="brand-new__body">
+            <h3 class="brand-new__catchcopy">
+              新しい夜の習慣に。<span class="brand-new__catchcopy-emphasis">MARINOAのフェイスマスク、誕生。</span>
+            </h3>
+
+            <div class="brand-new__description">
               <p>乾燥が気になる夜に、贅沢なうるおいを。</p>
-              <p>「MARINOA モイスチャライジングフェイスマスク」は、敏感肌にもやさしい天然由来成分をたっぷりと配合。たった15分で、肌に深く、しっかりと潤いを届けます。</p>
-              <p>まるで美容液をまとっているような心地よさと、翌朝まで感じられるもっちり感。がんばった一日の終わりに、自分をいたわる“ご褒美”を。</p>
+              <p>
+                「MARINOA モイスチャライジングフェイスマスク」は、敏感肌にもやさしい天然由来成分をたっぷりと配合。たった15分で、肌に深く、しっかりと潤いを届けます。
+              </p>
+              <p>
+                まるで美容液をまとっているような心地よさと、翌朝まで感じられるもっちり感。がんばった一日の終わりに、自分をいたわる“ご褒美”を。
+              </p>
             </div>
-            <div class="new-cta">
-              <a href="" class="new-cta-link">詳しく見る</a>
+
+            <div class="brand-new__cta">
+              <a href="#" class="brand-new__cta-link">詳しく見る</a>
             </div>
           </div>
         </article>
       </div>
     </section>
   </main>
+
 
   <footer class="site-footer">
     <div class="site-footer__inner">
@@ -212,13 +248,13 @@
     </div>
   </footer>
 
-    <script>
+  <script>
     const toggleButton = document.querySelector('.hamberger-toggle');
     const globalNav = document.querySelector('.global-nav');
     const headerInner = document.querySelector('.site-header__inner');
 
     toggleButton.addEventListener('click', () => {
-     const isOpen = globalNav.classList.toggle('is-open');
+      const isOpen = globalNav.classList.toggle('is-open');
       document.body.classList.toggle('is-open', isOpen);
       headerInner.classList.toggle('is-open', isOpen);
       toggleButton.setAttribute('aria-expanded', isOpen);
