@@ -50,7 +50,8 @@
           <li class="global-nav__item"><a href="./contact.html" class="global-nav__link">お問い合わせ</a></li>
         </ul>
       </nav>
-        <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+      <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false"
+        aria-label="メニューを開く">
         <span class="hamberger-toggle__line"></span>
         <span class="hamberger-toggle__line"></span>
         <span class="hamberger-toggle__line"></span>
@@ -59,117 +60,98 @@
     </div>
   </header>
 
-  <main id="news">
+  <main class="page-news">
     <section class="news">
-      <div class="news-container">
-        <h3 class="section-title">News</h3>
-
-        <div class="news-content">
-          <div class="news-category-buttons">
-            <button data-category="all" class="active" aria-pressed="false">すべて</button>
-            <button data-category="press" aria-pressed="false">プレスリリース</button>
-            <button data-category="info" aria-pressed="false">お知らせ</button>
-            <button data-category="important" aria-pressed="false">重要</button>
+      <div class="news__inner">
+        <h1 class="section-title">News</h1>
+        <div class="news__content">
+          <div class="news__filters" role="group" aria-label="ニュースカテゴリ">
+            <button type="button" class="news__filter is-active" data-category="all" aria-pressed="true">すべて</button>
+            <button type="button" class="news__filter" data-category="press" aria-pressed="false">プレスリリース</button>
+            <button type="button" class="news__filter" data-category="info" aria-pressed="false">お知らせ</button>
+            <button type="button" class="news__filter" data-category="important" aria-pressed="false">重要</button>
           </div>
-          <div class="news-inner">
+
+          <div class="news__body">
             <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-10-10" class="news-date">2025/10/10</time></li>
-                  <li><span class="news-category">プレスリリース</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「Marinoa公式オンラインストア リニューアルのお知らせ」</a>
+              <li class="news-list__item" data-category="press">
+                <div class="news-list__meta">
+                  <time datetime="2025-10-10" class="news-list__date">2025/10/10</time>
+                  <span class="news-list__category">プレスリリース</span>
+                </div>
+                <a href="#" class="news-list__link">「Marinoa公式オンラインストア リニューアルのお知らせ」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-09-25" class="news-date">2025/9/25</time></li>
-                  <li><span class="news-category">プレスリリース</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「ブランド初の直営店『Marinoa 表参道店』オープン決定」</a>
+
+              <li class="news-list__item" data-category="press">
+                <div class="news-list__meta">
+                  <time datetime="2025-09-25" class="news-list__date">2025/9/25</time>
+                  <span class="news-list__category">プレスリリース</span>
+                </div>
+                <a href="#" class="news-list__link">「ブランド初の直営店『Marinoa 表参道店』オープン決定」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-08-20" class="news-date">2025/8/20</time></li>
-                  <li><span class="news-category">お知らせ</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「夏季限定『モイスチャーブライトセット』販売開始」</a>
+
+              <li class="news-list__item" data-category="info">
+                <div class="news-list__meta">
+                  <time datetime="2025-08-20" class="news-list__date">2025/8/20</time>
+                  <span class="news-list__category">お知らせ</span>
+                </div>
+                <a href="#" class="news-list__link">「夏季限定『モイスチャーブライトセット』販売開始」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-07-01" class="news-date">2025/7/1</time></li>
-                  <li><span class="news-category">プレスリリース</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「ハイドラバランストナーが美容雑誌『VOCE』に掲載されました」</a>
+
+              <li class="news-list__item" data-category="press">
+                <div class="news-list__meta">
+                  <time datetime="2025-07-01" class="news-list__date">2025/7/1</time>
+                  <span class="news-list__category">プレスリリース</span>
+                </div>
+                <a href="#" class="news-list__link">「ハイドラバランストナーが美容雑誌『VOCE』に掲載されました」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-06-15" class="news-date">2025/6/15</time></li>
-                  <li><span class="news-category">お知らせ</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「Marinoa公式Instagramフォロワー1万人突破の御礼」</a>
+
+              <li class="news-list__item" data-category="info">
+                <div class="news-list__meta">
+                  <time datetime="2025-06-15" class="news-list__date">2025/6/15</time>
+                  <span class="news-list__category">お知らせ</span>
+                </div>
+                <a href="#" class="news-list__link">「Marinoa公式Instagramフォロワー1万人突破の御礼」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-05-12" class="news-date">2025/5/12</time></li>
-                  <li><span class="news-category">プレスリリース</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「新製品『モイスチャライジングフェイスマスク』発売のお知らせ」</a>
+
+              <li class="news-list__item" data-category="press">
+                <div class="news-list__meta">
+                  <time datetime="2025-05-12" class="news-list__date">2025/5/12</time>
+                  <span class="news-list__category">プレスリリース</span>
+                </div>
+                <a href="#" class="news-list__link">「新製品『モイスチャライジングフェイスマスク』発売のお知らせ」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-04-10" class="news-date">2025/4/10</time></li>
-                  <li><span class="news-category">重要</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「ゴールデンウィーク期間中の配送スケジュールについて」</a>
+
+              <li class="news-list__item" data-category="important">
+                <div class="news-list__meta">
+                  <time datetime="2025-04-10" class="news-list__date">2025/4/10</time>
+                  <span class="news-list__category">重要</span>
+                </div>
+                <a href="#" class="news-list__link">「ゴールデンウィーク期間中の配送スケジュールについて」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-03-05" class="news-date">2025/3/5</time></li>
-                  <li><span class="news-category">重要</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「渋谷本社オフィス移転のお知らせ」</a>
+
+              <li class="news-list__item" data-category="important">
+                <div class="news-list__meta">
+                  <time datetime="2025-03-05" class="news-list__date">2025/3/5</time>
+                  <span class="news-list__category">重要</span>
+                </div>
+                <a href="#" class="news-list__link">「渋谷本社オフィス移転のお知らせ」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-02-14" class="news-date">2025/02/14</time></li>
-                  <li><span class="news-category">お知らせ</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「バレンタイン限定キャンペーン“Hydra Love”開催」</a>
+
+              <li class="news-list__item" data-category="info">
+                <div class="news-list__meta">
+                  <time datetime="2025-02-14" class="news-list__date">2025/02/14</time>
+                  <span class="news-list__category">お知らせ</span>
+                </div>
+                <a href="#" class="news-list__link">「バレンタイン限定キャンペーン“Hydra Love”開催」</a>
               </li>
-            </ul>
-            <ul class="news-list">
-              <li>
-                <ul class="news-item">
-                  <li><time datetime="2025-01-09" class="news-date">2025/01/09</time></li>
-                  <li><span class="news-category">お知らせ</span>
-                  </li>
-                </ul>
-                <a href="#" class="news-textlink">「新年のご挨拶と2025年春季新商品のご案内」</a>
+
+              <li class="news-list__item" data-category="info">
+                <div class="news-list__meta">
+                  <time datetime="2025-01-09" class="news-list__date">2025/01/09</time>
+                  <span class="news-list__category">お知らせ</span>
+                </div>
+                <a href="#" class="news-list__link">「新年のご挨拶と2025年春季新商品のご案内」</a>
               </li>
             </ul>
           </div>
@@ -194,7 +176,8 @@
     </section>
   </main>
 
- <footer class="site-footer">
+
+  <footer class="site-footer">
     <div class="site-footer__inner">
       <img src="./images/common/footer/corporate_logo_blue.svg" class="site-footer__logo" alt="株式会社MARINOA">
 
@@ -264,13 +247,13 @@
     </div>
   </footer>
 
-       <script>
+  <script>
     const toggleButton = document.querySelector('.hamberger-toggle');
     const globalNav = document.querySelector('.global-nav');
     const headerInner = document.querySelector('.site-header__inner');
 
     toggleButton.addEventListener('click', () => {
-     const isOpen = globalNav.classList.toggle('is-open');
+      const isOpen = globalNav.classList.toggle('is-open');
       document.body.classList.toggle('is-open', isOpen);
       headerInner.classList.toggle('is-open', isOpen);
       toggleButton.setAttribute('aria-expanded', isOpen);

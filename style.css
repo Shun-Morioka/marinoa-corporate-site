@@ -1051,35 +1051,38 @@ footer .site-footer__copyright {
 
 
 /* ==================================================================================================================
-   ニュース
+   ニュース（新HTML対応：見た目は現状維持）
    ================================================================================================================== */
-/* .news---------------------------------------- */
-#news {
+
+/* 旧：#news → 新：.page-news */
+.page-news {
   padding-top: 14rem;
   /* 固定ヘッダー分 */
 }
 
-/* container の中央寄せ＋左右余白を復元（TOPと同じ 1200 幅の見え方） */
-#news .news-container {
+/* 旧：#news .news-container → 新：.news__inner（中央寄せ＋左右余白は同じ） */
+.page-news .news__inner {
   max-width: 120rem;
   width: 100%;
   margin: 0 auto;
   padding: 0 6rem;
 }
 
-/* 2カラム（カテゴリボタン＋一覧）復元 */
-#news .news-content {
+/* 2カラム（カテゴリ＋一覧） */
+.page-news .news__content {
   display: flex;
   justify-content: space-between;
   gap: 0;
 }
 
-#news .news-category-buttons {
+/* 旧：.news-category-buttons → 新：.news__filters */
+.page-news .news__filters {
   display: flex;
   flex-direction: column;
 }
 
-#news .news-category-buttons button {
+/* 旧：#news .news-category-buttons button → 新：.news__filter */
+.page-news .news__filter {
   all: unset;
   padding: 2rem 0 2rem 2rem;
   background-color: #fff;
@@ -1088,40 +1091,41 @@ footer .site-footer__copyright {
   cursor: pointer;
 }
 
-#news .news-category-buttons .active {
+/* 旧：.active → 新：.is-active（HTML側でis-active付与） */
+.page-news .news__filter.is-active {
   border-left: 2px solid #709EFC;
 }
 
-/* 一覧領域 */
-#news .news-inner {
+/* 一覧領域（旧：.news-inner） */
+.page-news .news__body {
   width: 83%;
 }
 
-/* ここが重要：ニュースページは “ul.news-list が複数ある構造” なので ul に線を引く */
-#news .news-list {
+/* 旧は ul.news-list に線、しかし新は 1つのulなので liに線を引く */
+.page-news .news-list__item {
   margin-bottom: 3.2rem;
   padding-bottom: 1rem;
   border-bottom: solid 1px #D9D9D9;
 }
 
-#news .news-list:last-child {
+.page-news .news-list__item:last-child {
   margin-bottom: 0;
 }
 
-/* meta 行（date + category） */
-#news .news-item {
+/* meta 行（date + category） ※TOPと同じクラスを利用 */
+.page-news .news-list__meta {
   display: flex;
   justify-content: left;
   gap: 2.4rem;
 }
 
-#news .news-date {
+.page-news .news-list__date {
   font-size: 1.4rem;
   display: inline-block;
   width: 9rem;
 }
 
-#news .news-category {
+.page-news .news-list__category {
   display: inline-block;
   width: 11.6rem;
   text-align: center;
@@ -1132,44 +1136,45 @@ footer .site-footer__copyright {
   border-radius: 2rem;
 }
 
-/* タイトルリンク（左のメタ分だけインデント） */
-#news .news-textlink {
+/* タイトルリンク（左のメタ分だけインデント） ※TOPと同じ見た目 */
+.page-news .news-list__link {
   display: block;
   padding: 2rem 0 0 10.2rem;
   margin: 0;
   color: #101010;
 }
 
-#news .news-textlink:hover {
+.page-news .news-list__link:hover {
   text-decoration: underline;
   text-decoration-color: #6198FF;
   color: #6198FF;
   transition: 0.5s;
 }
 
-/* pagination（元CSSのまま復元） */
-#news .pagination {
+/* pagination（既存をそのまま適用） */
+.page-news .pagination {
   margin: 6rem 0 10rem 0;
 }
 
-#news .pagination-list {
+.page-news .pagination-list {
   display: flex;
   justify-content: center;
   gap: 3rem;
 }
 
-#news .pagination-list .page-prev,
-#news .pagination-list .page-link,
-#news .pagination-list .page-next {
+.page-news .pagination-list .page-prev,
+.page-news .pagination-list .page-link,
+.page-news .pagination-list .page-next {
   color: #6198FF;
 }
 
-#news .pagination-list .page-prev:hover,
-#news .pagination-list .page-link:hover,
-#news .pagination-list .page-next:hover {
+.page-news .pagination-list .page-prev:hover,
+.page-news .pagination-list .page-link:hover,
+.page-news .pagination-list .page-next:hover {
   text-decoration: underline;
   text-decoration-color: #6198FF;
 }
+
 
 
 
@@ -1798,8 +1803,6 @@ footer .site-footer__copyright {
     align-items: flex-start;
   }
 
-
-
   .page-home .home-links__button:last-child {
     margin-left: 6rem;
   }
@@ -1857,7 +1860,49 @@ footer .site-footer__copyright {
   .page-about .about-overview__map-head .about-overview__label {
     font-weight: 600;
   }
+
+  /* 余白は他ページと揃える（既に :root の --gutter が 3.2rem になる想定） */
+  .page-news .news__inner {
+    padding: 0 var(--gutter);
+  }
+
+  /* 2カラムをやめて縦積み（フィルター→一覧） */
+  .page-news .news__content {
+    flex-direction: column;
+  }
+
+  /* 右側の83%固定を解除 */
+  .page-news .news__body {
+    width: 100%;
+  }
+
+  /* フィルターは縦のままだと高さを食うので横並びにする（押しやすい） */
+  .page-news .news__filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 3.4rem;
+  }
+
+  /* 左線UIを“下線UI”に変更してもデザイン差が出にくい */
+  .page-news .news__filter.is-active {
+    border-left: 1px solid #aeb2b9;
+  }
+
+  .page-news .news__filter {
+    padding: 1.2rem 1.6rem;
+    border: 1px solid #aeb2b9;
+    border-radius: 2rem;
+    background-color: #f6f6f6;
+    padding: 0.4rem 1.6rem;
+    width: 100%;
+    max-width: 9.6rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
 }
+
 
 
 
@@ -2258,6 +2303,51 @@ footer .site-footer__copyright {
     /* 長い語や記号があってもはみ出しにくくする */
   }
 
+  /* リンクの左インデントを解除（TOPニュースと同じ方針） */
+  .page-news .news-list__link {
+    padding-left: 0;
+  }
+
+  /* meta間隔を詰める */
+  .page-news .news-list__meta {
+    gap: 1.2rem;
+  }
+
+  /* 日付幅を少し縮めて折り返しを安定させる */
+  .page-news .news-list__date {
+    width: 8rem;
+  }
+
+  /* カテゴリも少し縮める（文字が長い場合は必要に応じて調整） */
+  .page-news .news-list__category {
+    width: 10.8rem;
+  }
+
+  /* ページ番号が多いので折り返し許可 */
+  .page-news .pagination-list {
+    flex-wrap: wrap;
+    row-gap: 1.2rem;
+  }
+
+    /* 折り返し前提で詰める */
+  .page-news .pagination-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  /* ページ番号をタップしやすいサイズにする */
+  .page-news .pagination-list .page-link,
+  .page-news .pagination-list .page-prev,
+  .page-news .pagination-list .page-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.6rem;
+    height: 3.6rem;
+    padding: 0 1.2rem;
+  }
+
 }
 
 
@@ -2292,6 +2382,8 @@ footer .site-footer__copyright {
     height: 70rem;
     /* 縦ラインを内側へ */
   }
+
+
 }
 
 
