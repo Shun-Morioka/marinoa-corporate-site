@@ -1189,111 +1189,81 @@ footer .site-footer__copyright {
    お問い合わせ
    ================================================================================================================== */
 /* .contact---------------------------------------- */
-#contact {
-  padding: 14rem 0 10rem 0;
+.contact {
+  padding: 14rem 0 10rem;
 }
 
-#contact .contact .contact-container {
+.contact__inner {
   width: 90rem;
-  height: auto;
   margin: 0 auto;
 }
 
-#contact .section-title {
-  margin-bottom: 4.0rem;
-}
-
-#contact .contact-description {
+.contact__lead {
   width: 92rem;
   line-height: 1.5;
 }
 
-#contact .contact-form {
+/* form */
+.contact-form {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
 
-#contact label {
-  display: inline-block;
+.contact-form__row {
+  display: flex;
+  align-items: center;
+}
+
+.contact-form__row--textarea {
+  align-items: flex-start;
+}
+
+.contact-form__label {
   width: 18rem;
-  height: auto;
   text-align: right;
   margin-right: 4rem;
 }
 
+.contact-form__field {
+  flex: 1;
+  min-width: 0;
+}
 
-/* フォーム記入欄 */
-#contact #name,
-#contact #email,
-#contact #tel,
-#contact #category,
-#contact #message {
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+  width: 100%;
+  max-width: 40rem;
   background-color: #CCDEFF;
   border: none;
   padding: 1rem 2rem;
 }
 
-#contact #name,
-#email,
-#tel,
-#category {
-  width: 40rem;
-}
-
-#contact #message {
-  width: 68rem;
+.contact-form__textarea {
+  max-width: 68rem;
   height: 30rem;
   resize: none;
 }
 
-#contact .message {
-  display: flex;
-  align-items: flex-start;
-}
-
-#contact .required {
-  font-size: 1.2rem;
-  color: #FC0015;
-  border: 1px solid #FC0015;
-  padding: 0.2rem 0.8rem;
-  margin: 0 0 0 1rem;
-  border-radius: 20rem;
-}
-
-#contact .checkbox,
-#contact .button {
+/* agree */
+.contact-form__agree {
   text-align: center;
 }
 
-#contact .checkbox input {
-  width: 4rem;
-}
-
-#contact .checkbox .privacy-link {
+.contact-form__agree-label {
   display: inline-flex;
   align-items: center;
-  color: #5188FC;
+  gap: 1rem;
 }
 
-#contact .checkbox .privacy-link:hover {
-  text-decoration: underline;
-  text-decoration-color: #5188FC;
+/* submit */
+.contact-form__actions {
+  text-align: center;
 }
 
-#contact .checkbox .privacy-link::after {
-  content: "";
-  display: inline-block;
-  width: 1.6rem;
-  height: 1.6rem;
-  background-image: url("./images/contact/privacy-link-IMG.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#contact .button #submit {
+.contact-form__submit {
   background-color: #5F79AA;
   color: #fff;
   border: none;
@@ -1301,10 +1271,15 @@ footer .site-footer__copyright {
   cursor: pointer;
 }
 
-#contact .button #submit:hover {
-  opacity: 0.9;
+/* 必須ラベル */
+.required {
+  font-size: 1.2rem;
+  color: #FC0015;
+  border: 1px solid #FC0015;
+  padding: 0.2rem 0.8rem;
+  margin-left: 1rem;
+  border-radius: 20rem;
 }
-
 
 
 
@@ -1901,6 +1876,23 @@ footer .site-footer__copyright {
     font-size: 1.4rem;
   }
 
+  .contact__inner {
+    width: 100%;
+    padding: 0 var(--gutter);
+  }
+
+  .contact__lead {
+    width: 100%;
+    line-height: 1.8;
+  }
+
+  /* 入力欄の最大幅制限が窮屈なら、タブレットでは広げる */
+  .contact-form__input,
+  .contact-form__select,
+  .contact-form__textarea {
+    max-width: 100%;
+  }
+
 }
 
 
@@ -2329,7 +2321,7 @@ footer .site-footer__copyright {
     row-gap: 1.2rem;
   }
 
-    /* 折り返し前提で詰める */
+  /* 折り返し前提で詰める */
   .page-news .pagination-list {
     flex-wrap: wrap;
     justify-content: center;
@@ -2346,6 +2338,53 @@ footer .site-footer__copyright {
     min-width: 3.6rem;
     height: 3.6rem;
     padding: 0 1.2rem;
+  }
+
+  /* 1行（ラベル＋入力）を縦積みへ */
+  .contact-form__row,
+  .contact-form__row--textarea {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+
+  /* ラベル：右寄せ解除、固定幅解除 */
+  .contact-form__label {
+    width: auto;
+    text-align: left;
+    margin-right: 0;
+  }
+
+  /* 入力欄：横幅100% */
+  .contact-form__input,
+  .contact-form__select,
+  .contact-form__textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* テキストエリア：スマホで扱いやすい高さ */
+  .contact-form__textarea {
+    height: 24rem;
+  }
+
+  /* 同意欄：折り返し前提で詰まり防止 */
+  .contact-form__agree-label {
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1.6;
+  }
+
+  /* 送信ボタン：タップしやすい幅へ */
+  .contact-form__submit {
+    width: 100%;
+    max-width: 36rem;
+    padding: 1.4rem 0;
+  }
+
+  .contact-form {
+    gap: 3rem;
   }
 
 }
@@ -2383,6 +2422,9 @@ footer .site-footer__copyright {
     /* 縦ラインを内側へ */
   }
 
+  .contact-form__agree-label {
+    font-size: 1.4rem;
+  }
 
 }
 
@@ -2409,4 +2451,5 @@ footer .site-footer__copyright {
     line-height: 2;
     font-size: 1.4rem;
   }
+
 }
