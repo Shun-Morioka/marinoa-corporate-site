@@ -1024,10 +1024,14 @@ footer .site-footer__copyright {
 /* Brand：Intro/New の画像サイズを同条件で固定（flexで縮まないようにする） */
 .page-brand .brand-intro__product-image,
 .page-brand .brand-new__product-image {
-  flex: 0 0 40rem;     /* 幅40remを“固定” */
-  width: 40rem;        /* 念のため明示 */
-  max-width: 40rem;    /* 想定外の上書き対策 */
-  flex-shrink: 0;      /* これが重要：画像を縮ませない */
+  flex: 0 0 40rem;
+  /* 幅40remを“固定” */
+  width: 40rem;
+  /* 念のため明示 */
+  max-width: 40rem;
+  /* 想定外の上書き対策 */
+  flex-shrink: 0;
+  /* これが重要：画像を縮ませない */
   height: auto;
 }
 
@@ -1035,7 +1039,8 @@ footer .site-footer__copyright {
 .page-brand .brand-intro__body,
 .page-brand .brand-new__body {
   flex: 1 1 auto;
-  min-width: 0;        /* 折り返しを安定させ、画像が縮むのを防ぐ */
+  min-width: 0;
+  /* 折り返しを安定させ、画像が縮むのを防ぐ */
 }
 
 
@@ -1287,21 +1292,23 @@ footer .site-footer__copyright {
 
 
 /* ==================================================================================================================
-   採用情報
+   採用情報（新HTML対応：見た目は現状維持）
    ================================================================================================================== */
-/* .mv---------------------------------------- */
-#recruit .mv-img {
+
+/* MV */
+.page-recruit .recruit-mv__img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-#recruit .message {
+/* message */
+.page-recruit .recruit-message {
   width: 100%;
   background: linear-gradient(#8CB2FF 15%, #BFD4FF 70%);
 }
 
-#recruit .message-container {
+.page-recruit .recruit-message__container {
   width: 100%;
   max-width: 120rem;
   padding: 20rem 0;
@@ -1312,7 +1319,7 @@ footer .site-footer__copyright {
   gap: 6rem;
 }
 
-#recruit .message-text {
+.page-recruit .recruit-message__text {
   font-family: "Shippori Mincho", serif;
   color: #fff;
   font-weight: 400;
@@ -1320,86 +1327,83 @@ footer .site-footer__copyright {
 }
 
 
-
-
-/* .president-message---------------------------------------- */
-#recruit .president-message {
+/* president-message */
+.page-recruit .recruit-president {
   padding: 10rem 0;
 }
 
-
-#recruit .president-message-container {
+.page-recruit .recruit-president__container {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
 }
 
-#recruit .president-message-content {
+.page-recruit .recruit-president__content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-#recruit .president-message-textbox {
+.page-recruit .recruit-president__textbox {
   width: 62rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
 
-#recruit .president-message-catchcopy {
+.page-recruit .recruit-president__catchcopy {
   font-size: 3.2rem;
   font-weight: 400;
 }
 
-#recruit .img-content {
+.page-recruit .recruit-president__img-content {
   transform: translateY(4.6rem);
 }
 
-#recruit .img-content .president-image {
+.page-recruit .recruit-president__image {
   width: 38rem;
 }
 
-#recruit .img-content .product-name {
+.page-recruit .recruit-president__product-name {
   text-align: right;
 }
 
-#recruit .img-content .product-name .label {
+.page-recruit .recruit-president__label {
   margin-right: 2.4rem;
 }
 
 
-
-
-/* .team---------------------------------------- */
-#recruit .team {
+/* team */
+.page-recruit .recruit-team {
   margin-bottom: 10rem;
 }
 
-#recruit .team-container {
+.page-recruit .recruit-team__container {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
 }
 
-#recruit .team-content {
+.page-recruit .recruit-team__content {
   display: flex;
   justify-content: space-between;
   gap: 8rem;
 }
 
-#recruit .team-member {
+.page-recruit .recruit-team__member {
   flex: 1;
 }
 
-#recruit .team-member .team-member__photo {
+/* 旧：.team-member__photo */
+.page-recruit .recruit-team__photo {
   display: block;
   margin: 0 auto;
   width: 20rem;
   height: auto;
 }
 
-#recruit .team-member .team-member__label {
+/* 旧：.team-member__label */
+.page-recruit .recruit-team__label {
   background-color: #699AFF;
   color: #fff;
   font-weight: 500;
@@ -1410,40 +1414,44 @@ footer .site-footer__copyright {
   width: fit-content;
 }
 
-#recruit .team-member:first-child .team-member__label {
+/* 旧CSSの nth-child 調整を踏襲 */
+.page-recruit .recruit-team__member:first-child .recruit-team__label {
   padding: 0.2rem 0 0.2rem 0.7rem;
 }
 
-#recruit .team-member:nth-child(2) .team-member__label {
+.page-recruit .recruit-team__member:nth-child(2) .recruit-team__label {
   padding: 0.2rem 3rem;
 }
 
-#recruit .team-member:nth-child(3) .team-member__label {
+.page-recruit .recruit-team__member:nth-child(3) .recruit-team__label {
   padding: 0.2rem 3rem;
   transform: translate(-4.6rem, -1.2rem);
 }
 
-#recruit .team-member:nth-child(4) .team-member__label {
+.page-recruit .recruit-team__member:nth-child(4) .recruit-team__label {
   padding: 0.2rem 0.7rem;
 }
 
-#recruit .team-member .team-member__name {
+/* 旧：.team-member__name */
+.page-recruit .recruit-team__name {
   font-size: 2rem;
   font-weight: bold;
   transform: translate(11.6rem, -1rem);
 }
 
-#recruit .team-member .team-member__text {
+/* 旧：.team-member__text */
+.page-recruit .recruit-team__text {
   margin: 0.8rem 0 2rem 0;
   font-size: 1.4rem;
 }
 
-#recruit .team-member .team-member__footer {
+/* 旧：footer部のVIEW MORE */
+.page-recruit .recruit-team__footer {
   color: #699AFF;
   text-align: right;
 }
 
-#recruit .team-member .team-member__link::after {
+.page-recruit .recruit-team__link::after {
   content: "";
   display: inline-block;
   width: 2rem;
@@ -1456,29 +1464,24 @@ footer .site-footer__copyright {
   margin-left: 1rem;
 }
 
-
-#recruit .team-member .team-member__link:visited {
+.page-recruit .recruit-team__link:visited {
   color: #699AFF;
 }
 
 
-
-
-/* .marinoa-stats---------------------------------------- */
-
-#recruit .marinoa-stats {
+/* marinoa-stats */
+.page-recruit .recruit-stats {
   background-color: #E8F0FF;
   padding: 10rem 0;
 }
 
-
-#recruit .marinoa-stats .marinoa-stats-container {
+.page-recruit .recruit-stats__container {
   max-width: 100rem;
   width: 100%;
   margin: 0 auto;
 }
 
-#recruit .marinoa-stats .section-title__marinoa-stats {
+.page-recruit .recruit-stats__title {
   background-color: #fff;
   color: #6395FF;
   border: 4px solid #6395FF;
@@ -1492,7 +1495,7 @@ footer .site-footer__copyright {
   font-size: 4.8rem;
 }
 
-#recruit .marinoa-stats-content {
+.page-recruit .recruit-stats__content {
   margin-top: 8.8rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1500,42 +1503,42 @@ footer .site-footer__copyright {
   gap: 2rem;
 }
 
-#recruit .stats-box {
-  /* aspect-ratio: 1 / 1; */
+/* ここ以降は既存 stats-box をそのまま利用 */
+.page-recruit .stats-box {
   background-color: #fff;
   border-radius: 20px;
   text-align: center;
 }
 
-#recruit .stats-box__square {
+.page-recruit .stats-box__square {
   max-width: 23.5rem;
   height: 23.5rem;
   grid-column: span 1;
   grid-row: span 1;
 }
 
-#recruit .stats-box__tall {
+.page-recruit .stats-box__tall {
   max-width: 23.5rem;
   height: 49rem;
   grid-column: span 1;
   grid-row: span 2;
 }
 
-#recruit .stats-box__wide {
+.page-recruit .stats-box__wide {
   max-width: 49rem;
   height: 23.5rem;
   grid-column: span 2;
   grid-row: span 1;
 }
 
-#recruit .stats-box__large {
+.page-recruit .stats-box__large {
   max-width: 49rem;
   height: 49rem;
   grid-column: span 2;
   grid-row: span 2;
 }
 
-#recruit .stats-box__label {
+.page-recruit .stats-box__label {
   background-color: #6395FF;
   border-radius: 40px;
   color: #fff;
@@ -1544,94 +1547,94 @@ footer .site-footer__copyright {
   font-weight: 600;
 }
 
-#recruit .stats-box__number {
+.page-recruit .stats-box__number {
   color: #6395FF;
   font-weight: 700;
 }
 
-/* largeの要素の設定 */
-#recruit .stats-box__large .stats-box__label {
+/* large */
+.page-recruit .stats-box__large .stats-box__label {
   padding: 1rem 4rem;
   font-size: 3.2rem;
 }
 
-#recruit .stats-box__large:first-child .stats-box__label,
-#recruit .stats-box__large:first-child .stats-box__number,
-#recruit .stats-box__large:first-child .stats-box__img {
+.page-recruit .stats-box__large:first-child .stats-box__label,
+.page-recruit .stats-box__large:first-child .stats-box__number,
+.page-recruit .stats-box__large:first-child .stats-box__img {
   transform: translateY(-6.6rem);
 }
 
-#recruit .stats-box__large .stats-box__number {
+.page-recruit .stats-box__large .stats-box__number {
   font-size: 12.8rem;
 }
 
-#recruit .stats-box__large:first-child .stats-box__number {
+.page-recruit .stats-box__large:first-child .stats-box__number {
   margin-top: 2rem;
 }
 
-#recruit .stats-box__large .stats-box__unit {
+.page-recruit .stats-box__large .stats-box__unit {
   font-size: 6.4rem;
 }
 
-/* wideの要素の設定 */
-#recruit .stats-box__wide .stats-box__label {
+/* wide */
+.page-recruit .stats-box__wide .stats-box__label {
   padding: 1rem 4rem;
   font-size: 3.2rem;
 }
 
-#recruit .stats-box__wide:nth-of-type(2) .stats-box__label,
-#recruit .stats-box__wide:nth-of-type(2) .stats-box__number,
-#recruit .stats-box__wide:nth-of-type(2) .stats-box__img {
+.page-recruit .stats-box__wide:nth-of-type(2) .stats-box__label,
+.page-recruit .stats-box__wide:nth-of-type(2) .stats-box__number,
+.page-recruit .stats-box__wide:nth-of-type(2) .stats-box__img {
   transform: translateY(-6.6rem);
 }
 
-#recruit .stats-box__wide:nth-of-type(2) .stats-box__number {
+.page-recruit .stats-box__wide:nth-of-type(2) .stats-box__number {
   font-size: 12rem;
 }
 
-#recruit .stats-box__wide .stats-box__number {
+.page-recruit .stats-box__wide .stats-box__number {
   display: inline-block;
   font-size: 8rem;
 }
 
-#recruit .stats-box__wide:nth-of-type(2) .stats-box__number {
+.page-recruit .stats-box__wide:nth-of-type(2) .stats-box__number {
   margin-top: 2rem;
 }
 
-#recruit .stats-box__wide .stats-box__unit {
+.page-recruit .stats-box__wide .stats-box__unit {
   font-size: 4.8rem;
 }
 
-#recruit .stats-box__wide .stats-box__list {
+.page-recruit .stats-box__wide .stats-box__list {
   display: flex;
   justify-content: center;
   gap: 4.6rem;
 }
 
-#recruit .stats-box__wide .stats-box__list .stats-box__woman .stats-box__number {
+.page-recruit .stats-box__wide .stats-box__list .stats-box__woman .stats-box__number {
   color: #FF63C6;
 }
 
-/* squareの要素の設定 */
-#recruit .stats-box__square .stats-box__label {
+/* square */
+.page-recruit .stats-box__square .stats-box__label {
   width: 90%;
   padding: 0.2rem 0;
   margin-bottom: 2.2rem;
 }
 
-#recruit .stats-box__square:nth-of-type(6) .stats-box__label {
+.page-recruit .stats-box__square:nth-of-type(6) .stats-box__label {
   font-size: 1.4rem;
 }
 
-#recruit .stats-box__square .stats-box__number {
+.page-recruit .stats-box__square .stats-box__number {
   font-size: 8rem;
 }
 
-#recruit .stats-box__square .stats-box__unit {
+.page-recruit .stats-box__square .stats-box__unit {
   font-size: 3.2rem;
 }
 
-#recruit .stats-box__square .stats-box__alert {
+.page-recruit .stats-box__square .stats-box__alert {
   font-size: 1rem;
   color: #6E6E6E;
   text-align: start;
@@ -1639,95 +1642,94 @@ footer .site-footer__copyright {
   font-weight: 700;
 }
 
-/* tallの要素の設定 */
-#recruit .stats-box__tall .stats-box__item {
+/* tall */
+.page-recruit .stats-box__tall .stats-box__item {
   height: 50%;
   display: flex;
   flex-direction: column;
 }
 
-#recruit .stats-box__tall .stats-box__item:first-child {
+.page-recruit .stats-box__tall .stats-box__item:first-child {
   border-bottom: 2px dashed #6395FF;
 }
 
-#recruit .stats-box__tall .stats-box__label {
+.page-recruit .stats-box__tall .stats-box__label {
   width: 60%;
   padding: 0.2rem 0;
   margin: 3.2rem auto 2.2rem auto;
 }
 
-#recruit .stats-box__tall .stats-box__item:nth-child(2) .stats-box__label {
+.page-recruit .stats-box__tall .stats-box__item:nth-child(2) .stats-box__label {
   margin: 4.2rem auto 2.2rem auto;
 }
 
-#recruit .stats-box__tall .stats-box__number {
+.page-recruit .stats-box__tall .stats-box__number {
   font-size: 8rem;
 }
 
-#recruit .stats-box__tall .stats-box__unit {
+.page-recruit .stats-box__tall .stats-box__unit {
   font-size: 3.2rem;
 }
 
 /* stats内の画像設定 */
-
-#recruit .marinoa-stats .stats-box__img {
+.page-recruit .recruit-stats .stats-box__img {
   mix-blend-mode: multiply;
 }
 
-#recruit .marinoa-stats .stats-box__img.company-img {
+.page-recruit .recruit-stats .stats-box__img.company-img {
   width: 40%;
   height: auto;
+  display: inline-block;
 }
 
-#recruit .marinoa-stats .stats-box__img.beaker-img {
+.page-recruit .recruit-stats .stats-box__img.beaker-img {
   display: inline-block;
   margin-left: 3.2rem;
 }
 
-#recruit .marinoa-stats .stats-box__img.clock-img {
+.page-recruit .recruit-stats .stats-box__img.clock-img {
   margin-left: 3.2rem;
-  transform: translateY(0.6rem);
+  display: inline-block;
 }
 
-#recruit .marinoa-stats .stats-box__img.beaker-img,
-#recruit .marinoa-stats .clock-img {
+.page-recruit .recruit-stats .stats-box__img.beaker-img,
+.page-recruit .recruit-stats .clock-img {
   width: 16%;
   height: auto;
 }
 
-#recruit .marinoa-stats .stats-box__img.vacances-img {
+.page-recruit .recruit-stats .stats-box__img.vacances-img {
   width: 44%;
   height: auto;
+  display: inline-block;
 }
 
-#recruit .marinoa-stats .stats-box__img.pict-man-img,
-.pict-woman-img {
+.page-recruit .recruit-stats .stats-box__img.pict-man-img,
+.page-recruit .recruit-stats .pict-woman-img {
   width: auto;
   height: 5.7rem;
 }
 
 
-
-
-/* .entry---------------------------------------- */
-#recruit .entry {
+/* entry */
+.page-recruit .recruit-entry {
   padding: 8rem 0 10rem 0;
 }
 
-#recruit .entry-container {
+.page-recruit .recruit-entry__container {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
 }
 
-#recruit .entry-content {
+.page-recruit .recruit-entry__content {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 16.8rem;
 }
 
-#recruit .entry-btn {
+.page-recruit .recruit-entry__btn {
   background-color: #5F79AA;
   padding: 2rem 12rem;
   color: #fff;
@@ -1737,15 +1739,26 @@ footer .site-footer__copyright {
   transition: 0.5s;
 }
 
-#recruit .entry-btn:hover {
+.page-recruit .recruit-entry__btn:hover {
   background-color: transparent;
   color: #5F79AA;
   border: 1px solid #5F79AA;
   transition: 0.5s;
 }
 
+.stats-box__man {
+  display: flex;
+  align-items: center;
+}
 
+.stats-box__woman {
+  display: flex;
+  align-items: center;
+}
 
+.recruit-team__link {
+  color: #709EFC;
+}
 
 
 
@@ -1868,7 +1881,7 @@ footer .site-footer__copyright {
     padding: 2.4rem;
   }
 
-    .page-brand .brand-intro__product-image,
+  .page-brand .brand-intro__product-image,
   .page-brand .brand-new__product-image {
     flex: 0 0 36rem;
     width: 36rem;
@@ -1914,6 +1927,81 @@ footer .site-footer__copyright {
     max-width: 9.6rem;
     text-align: center;
     font-size: 1.4rem;
+  }
+
+  /* 各セクション左右余白 */
+  .page-recruit .recruit-president__container,
+  .page-recruit .recruit-team__container,
+  .page-recruit .recruit-entry__container,
+  .page-recruit .recruit-stats__container {
+    padding: 0 var(--gutter);
+  }
+
+  /* President：2カラムが窮屈になるので比率調整 */
+  .page-recruit .recruit-president__textbox {
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-right: 3.2rem;
+  }
+
+  .page-recruit .recruit-president__image {
+    width: min(34rem, 100%);
+  }
+
+  /* Team：横4固定を崩さず、間隔だけ詰める */
+  .page-recruit .recruit-team__content {
+    gap: 3.2rem;
+  }
+
+  /* Stats：4列→2列（固定サイズ解除） */
+  .page-recruit .recruit-stats__content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-recruit .stats-box__square,
+  .page-recruit .stats-box__tall,
+  .page-recruit .stats-box__wide,
+  .page-recruit .stats-box__large {
+    max-width: none;
+    width: 100%;
+  }
+
+  /* 画面幅に合わせて“比率”で保つ（固定px相当の潰れを防ぐ） */
+  .page-recruit .stats-box__square {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .page-recruit .stats-box__wide {
+    aspect-ratio: 2 / 1;
+    height: auto;
+  }
+
+  .page-recruit .stats-box__large {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .page-recruit .stats-box__tall {
+    aspect-ratio: 1 / 2;
+    height: auto;
+  }
+
+  /* transformで持ち上げている要素は、縮小時にズレやすいので無効化 */
+  .page-recruit .stats-box__large:first-child .stats-box__label,
+  .page-recruit .stats-box__large:first-child .stats-box__number,
+  .page-recruit .stats-box__large:first-child .stats-box__img,
+  .page-recruit .stats-box__wide:nth-of-type(2) .stats-box__label,
+  .page-recruit .stats-box__wide:nth-of-type(2) .stats-box__number,
+  .page-recruit .stats-box__wide:nth-of-type(2) .stats-box__img {
+    transform: none;
+  }
+
+  /* タイトルが大きすぎる場合の保険 */
+  .page-recruit .recruit-stats__title {
+    font-size: 3.6rem;
+    margin-bottom: 6rem;
   }
 
   .contact__inner {
@@ -1966,7 +2054,7 @@ footer .site-footer__copyright {
     top: 7.2rem;
     left: 0;
     width: 100%;
-    height: calc(100vh - 7.2rem);
+    height: calc(100dvh - 7.2rem);
     background-color: #aeb2b9;
   }
 
@@ -2338,7 +2426,7 @@ footer .site-footer__copyright {
     /* 長い語や記号があってもはみ出しにくくする */
   }
 
-    /* Intro：縦積み */
+  /* Intro：縦積み */
   .page-brand .brand-intro {
     margin: 6rem 0;
   }
@@ -2451,6 +2539,110 @@ footer .site-footer__copyright {
     padding: 0 1.2rem;
   }
 
+  /* MV直下が固定ヘッダーに隠れる場合の保険（必要なら有効化）
+  .page-recruit { padding-top: 7.2rem; }
+  */
+
+  /* message：上下余白を縮める */
+  .page-recruit .recruit-message__container {
+    padding: 12rem 0;
+    gap: 3.2rem;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  /* President：縦積み */
+  .page-recruit .recruit-president__content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3.2rem;
+  }
+
+  .page-recruit .recruit-president__textbox {
+    margin-right: 0;
+  }
+
+  .page-recruit .recruit-president__img-content {
+    transform: none;
+    display: grid;
+    justify-items: end;
+  }
+
+  .page-recruit .recruit-president__image {
+    width: min(38rem, 100%);
+    margin-left: auto;
+  }
+
+  /* Team：2列グリッドに変更（横4は崩れる） */
+  .page-recruit .recruit-team__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.4rem;
+  }
+
+  /* Team：transform配置は狭い画面で崩れるので解除 */
+  .page-recruit .recruit-team__label,
+  .page-recruit .recruit-team__name {
+    transform: none;
+  }
+
+  .page-recruit .recruit-team__label {
+    margin-top: 0.8rem;
+  }
+
+  .page-recruit .recruit-team__name {
+    text-align: center;
+    margin-top: 0.8rem;
+  }
+
+  .page-recruit .recruit-team__text {
+    text-align: center;
+  }
+
+  .page-recruit .recruit-team__footer {
+    text-align: center;
+  }
+
+  /* Stats：2列のまま、文字を縮める */
+  .page-recruit .recruit-stats__title {
+    font-size: 2.6rem;
+    padding: 0.8rem 2.4rem;
+  }
+
+  .page-recruit .stats-box__large .stats-box__label,
+  .page-recruit .stats-box__wide .stats-box__label {
+    font-size: 2.2rem;
+    padding: 0.8rem 2.4rem;
+  }
+
+  .page-recruit .stats-box__large .stats-box__number {
+    font-size: 9.6rem;
+  }
+
+  .page-recruit .stats-box__wide .stats-box__number {
+    font-size: 6.4rem;
+  }
+
+  .page-recruit .stats-box__square .stats-box__number,
+  .page-recruit .stats-box__tall .stats-box__number {
+    font-size: 6.4rem;
+  }
+
+  /* Entry：ボタン縦積み */
+  .page-recruit .recruit-entry__content {
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+  }
+
+  .page-recruit .recruit-entry__btn {
+    width: 100%;
+    max-width: 36rem;
+    text-align: center;
+    padding: 1.6rem 0;
+    font-size: 2.4rem;
+  }
+
   /* 1行（ラベル＋入力）を縦積みへ */
   .contact-form__row,
   .contact-form__row--textarea {
@@ -2533,7 +2725,7 @@ footer .site-footer__copyright {
     /* 縦ラインを内側へ */
   }
 
-    .page-brand .brand-intro__catchcopy,
+  .page-brand .brand-intro__catchcopy,
   .page-brand .brand-new__catchcopy {
     font-size: 2.6rem;
     margin-bottom: 2.4rem;
@@ -2555,6 +2747,41 @@ footer .site-footer__copyright {
     max-width: 32rem;
     text-align: center;
     padding: 1.4rem 0;
+  }
+
+  /* Team：1列 */
+  .page-recruit .recruit-team__content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats：1列（ここで一気に崩れを止める） */
+  .page-recruit .recruit-stats__content {
+    grid-template-columns: 1fr;
+  }
+
+  /* 1列時は比率を少し横長寄りにして“縦に長すぎ”を防ぐ */
+  .page-recruit .stats-box__wide {
+    aspect-ratio: 16 / 9;
+  }
+
+  .page-recruit .stats-box__large {
+    aspect-ratio: 16 / 12;
+  }
+
+  .page-recruit .stats-box__tall {
+    aspect-ratio: 16 / 18;
+  }
+
+  .page-recruit .recruit-stats__title {
+    font-size: 2.2rem;
+  }
+
+  .page-recruit .stats-box__large .stats-box__number {
+    font-size: 8rem;
+  }
+
+  .page-recruit .stats-box__wide .stats-box__number {
+    font-size: 5.6rem;
   }
 
   .contact-form__agree-label {
