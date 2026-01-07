@@ -63,7 +63,10 @@
   <main class="page-recruit">
 
     <section class="recruit-mv">
-      <img src="./images/recruit/MV/recruit_MV_3024*1600.webp" class="recruit-mv__img" alt="採用ページのキービジュアル（女性の笑顔の写真）">
+      <picture class="recruit-mv__media">
+        <source media="(max-width: 480px)" srcset="./images/recruit/MV/Frame259.png">
+        <img src="./images/recruit/MV/recruit_MV_3024*1600.webp" class="recruit-mv__img" alt="採用ページのキービジュアル（女性の笑顔の写真）">
+      </picture>
     </section>
 
     <section class="recruit-message">
@@ -345,14 +348,14 @@
         <nav class="footer-nav" aria-label="フッターナビゲーション">
           <div class="footer-nav__inner">
             <ul class="footer-nav__list">
-              <li class="footer-nav__item"><a class="footer-nav__link" href="/about.html">会社概要</a></li>
-              <li class="footer-nav__item"><a class="footer-nav__link" href="/brand.html">ブランド</a></li>
-              <li class="footer-nav__item"><a class="footer-nav__link" href="/news.html">ニュース</a></li>
-              <li class="footer-nav__item"><a class="footer-nav__link" href="/recruit.html">採用情報</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="./about.html">会社概要</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="./brand.html">ブランド</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="./news.html">ニュース</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="./recruit.html">採用情報</a></li>
             </ul>
 
             <ul class="footer-nav__contact">
-              <li class="footer-nav__item"><a class="footer-nav__link" href="/contact.html">お問い合わせ</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="./contact.html">お問い合わせ</a></li>
             </ul>
 
           </div>
@@ -372,6 +375,8 @@
       </div>
     </div>
   </footer>
+
+
   <script>
     const toggleButton = document.querySelector('.hamberger-toggle');
     const globalNav = document.querySelector('.global-nav');
