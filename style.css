@@ -793,8 +793,6 @@ footer .site-footer__copyright {
 /* ==================================================================================================================
    ブランド（新HTML対応：見た目は現状維持）
    ================================================================================================================== */
-
-
 /* hero / MV（旧：.brand .mv-img → 新：.brand-hero__image） */
 .page-brand .brand-hero__image {
   width: 100%;
@@ -1292,7 +1290,7 @@ footer .site-footer__copyright {
 
 
 /* ==================================================================================================================
-   採用情報（新HTML対応：見た目は現状維持）
+   採用情報
    ================================================================================================================== */
 
 /* MV */
@@ -1496,7 +1494,6 @@ footer .site-footer__copyright {
 }
 
 .page-recruit .recruit-stats__content {
-  margin-top: 8.8rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 1fr;
@@ -1952,6 +1949,10 @@ footer .site-footer__copyright {
   /* Team：横4固定を崩さず、間隔だけ詰める */
   .page-recruit .recruit-team__content {
     gap: 3.2rem;
+  }
+
+  .recruit-stats {
+    display: none;
   }
 
   /* Stats：4列→2列（固定サイズ解除） */
