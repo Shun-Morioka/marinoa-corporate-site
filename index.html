@@ -50,7 +50,8 @@
         </ul>
       </nav>
 
-      <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+      <button class="hamberger-toggle" type="button" aria-controls="global-nav" aria-expanded="false"
+        aria-label="メニューを開く">
         <span class="hamberger-toggle__line"></span>
         <span class="hamberger-toggle__line"></span>
         <span class="hamberger-toggle__line"></span>
@@ -133,7 +134,7 @@
               </ul>
               <a href="#" class="news-list__link">「ブランド初の直営店『Marinoa 表参道店』オープン決定」</a>
             </li>
-            
+
             <li>
               <ul class="news-list__meta">
                 <li><time datetime="2025-08-20" class="news-list__date">2025/8/20</time></li>
@@ -243,7 +244,7 @@
     const headerInner = document.querySelector('.site-header__inner');
 
     toggleButton.addEventListener('click', () => {
-     const isOpen = globalNav.classList.toggle('is-open');
+      const isOpen = globalNav.classList.toggle('is-open');
       document.body.classList.toggle('is-open', isOpen);
       headerInner.classList.toggle('is-open', isOpen);
       toggleButton.setAttribute('aria-expanded', isOpen);
